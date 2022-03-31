@@ -139,11 +139,10 @@ thead tr {
     border-image: none;
 }
 
-
-.datemod {
-    padding-left: 0px;
+/*App bar*/
+.app-bar {
+    background: #38414d;
 }
-
 
 .dropdown-menu > li {
     padding-top: 3px;
@@ -498,6 +497,16 @@ hr {
     margin-bottom: 5px;
 }
 
+
+.hd-pre {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: #666;
+    display: block;
+}
+
+
 .hd-suffix {
     font-size: 16px;
     float: right;
@@ -684,6 +693,20 @@ h3.hd-section {
 .version {
     color: #666;
     margin-left: 5px;
+}
+
+#cn-accnt {
+    float: right;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 0px;
+    margin-top: 1.4em;
+    line-height: 1.4;
+}
+
+#cn-accnt .account-number {
+    font-size: 14px;
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
