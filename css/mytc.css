@@ -33,6 +33,7 @@ main {
 
 
 /* Template overrides */
+
 a:visited {
     color: #284162;
 }
@@ -176,10 +177,10 @@ textarea.fieldError,
     box-shadow: 0 0 1px #a00;
 }
 
-.error {
+/* .error {
     display: inline-block;
     width: 100%;
-}
+} */
 
 .fld-example {
     display: block;
@@ -534,6 +535,50 @@ h3.hd-section {
 .label-form {
     font-weight: 700;
     color: #666;
+}
+
+.label-danger .prefix,
+.alert-danger .prefix {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.panel-modes {
+    box-shadow: 0 3px 0 0 rgb(222 222 222 / 50%);
+
+    min-height: 100px;
+    border: 1px solid #eee;
+}
+
+.panel-modes .panel-heading > h2 {
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.panel-heading.modes-orange {
+    background-color: #e06425;
+
+}
+
+.panel-heading.modes-yellow {
+    background-color: #fdb53a;
+
+}
+
+.panel-heading.modes-darkblue {
+    background-color: #335075;
+
+}
+
+.panel-heading.modes-lightblue {
+    background-color: #00698c;
+
 }
 
 .thumbnail {
