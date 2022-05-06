@@ -108,11 +108,10 @@
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-unlock"></i> Recover your account</h1>
 
         <section class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
+            <h2>Recovery link expired</h2>
             <ol class="fa-ul">
-                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>Enter your email address.</a></li>
-                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered is not valid.</a></li>
-                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
+                <li><i class="fa-solid fa-angle-right"></i> The account activation link used has expired. Press the <strong>Recover account</strong> button below and we'll send you a new activation link.</li>
+
             </ol>
         </section>
 
@@ -123,9 +122,9 @@
                     <div class="form-group mrgn-tp-md">
                         <label for="email">Your email address (username@example.com)<span class="wb-inv">(required)</span>:
 
-                            <div class="error"><span class="label label-danger"><span class="prefix sr-only">Error: </span>Enter your email address.</span></div>
+
                         </label>
-                        <input name="email" id="email" type="text" size="50" class="form-control fieldError" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-msg="Enter your email address.">
+                        <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-msg="Enter your email address." value="jdoe@mail.com">
                     </div>
                     <p>We'll send you an activation email with a link allowing you to use a different GCKey or Sign-In Partner with your existing account.</p>
                 </div>
