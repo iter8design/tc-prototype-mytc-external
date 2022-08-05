@@ -65,6 +65,12 @@ h1 {
 
 }
 
+h2 {
+    font-size: 20px;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
 label {
     font-weight: normal;
 }
@@ -143,6 +149,20 @@ thead tr {
 /*App bar*/
 .app-bar {
     background: #38414d;
+}
+
+.department-name {
+    font-size: 16px;
+}
+
+.service-name {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
 }
 
 .dropdown-menu > li {
@@ -329,6 +349,21 @@ textarea.fieldError,
 
 .panel-businessLine > .panel-heading {
     background-color: #e1eefb;
+}
+
+.panel-feedback {
+    background: #d6f0fd;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #d6f0fd 0%, #f2f9fe 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #d6f0fd 0%, #f2f9fe 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #d6f0fd 0%, #f2f9fe 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6f0fd', endColorstr='#f2f9fe', GradientType=1);
+    /* IE6-9 */
+    border: 2px double #d6f0fd;
+    margin-top: 40px;
 }
 
 .cn-filter--grey {
