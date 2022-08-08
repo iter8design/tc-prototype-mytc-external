@@ -167,7 +167,7 @@
             </header>
             <div class="modal-body">
                 <section>
-                    <div class="container-fluid showHide" id="cn-receipt">
+                    <div class="container-fluid" id="cn-receipt">
 
                         <div class="row">
                             <div class="col-xs-6 text-right">
@@ -206,7 +206,7 @@
                                 <strong>Date/time: </strong>
                             </div>
                             <div class="col-xs-6 text-left">
-                                8/24/2018 1:08:41 PM
+                                2018-08-24 1:08:41 PM
                             </div>
                         </div>
 
@@ -217,7 +217,7 @@
                                 <strong>Transaction amount: </strong>
                             </div>
                             <div class="col-xs-6 text-left">
-                                $10.00
+                                $9,999.00
                             </div>
                         </div>
                         <div class="row">
@@ -291,15 +291,62 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-center">
-                            <a href="#" class="btn btn-default hidden-print" onClick="window.print()">Print receipt</a>
+
                         </div>
 
                     </div>
+
+                    <table class="table-condensed table mrgn-tp-lg">
+                        <thead>
+                            <tr>
+                                <th class="width60">Description</th>
+                                <th class="width10 text-right">Price</th>
+                                <th class="width10 text-right">Quantity</th>
+                                <th class="width10 text-right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{Line item description}</td>
+                                <td class="text-right">$9,999.00</td>
+                                <td class="text-right">999</td>
+                                <td class="text-right">$9,999,999.00</td>
+                            </tr>
+                            <tr>
+                                <td>{Line item description}</td>
+                                <td class="text-right">$9,999.00</td>
+                                <td class="text-right">999</td>
+                                <td class="text-right">$9,999,999.00</td>
+                            </tr>
+                            <tr>
+                                <td>{Line item description}</td>
+                                <td class="text-right">$9,999.00</td>
+                                <td class="text-right">999</td>
+                                <td class="text-right">$9,999,999.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="mrgn-tp-md">
+                                <td colspan="3" class="bg-grey">Subtotal</td>
+                                <td class="bg-grey text-right">$9,999,999.00</td>
+                            </tr>
+                            <tr class="mrgn-tp-md">
+                                <td colspan="3" class="bg-grey">Taxes (<abbr title="Harmonized sales tax">HST</abbr>)</td>
+                                <td class="bg-grey text-right">$9,999.00</td>
+                            </tr>
+                            <tr class="mrgn-tp-md">
+                                <td colspan="3" class="bg-grey large"><strong>Total</strong></td>
+                                <td class="bg-grey text-right"><strong>$9,999,999.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
                 </section>
             </div>
             <footer class="modal-footer">
-
-                <a href="#" class="btn btn-primary popup-modal-dismiss btn btn-default pull-left hidden-print">Close</a>
+                <a href="#" class="btn btn-primary hidden-print pull-left" onClick="window.print()"><i class="fa-solid fa-print"></i> Print receipt</a>
+                <a href="#" class="btn btn-default popup-modal-dismiss btn btn-default pull-left hidden-print"><i class="fa-regular fa-circle-xmark"></i> Close</a>
             </footer>
         </section>
 
@@ -362,7 +409,10 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
