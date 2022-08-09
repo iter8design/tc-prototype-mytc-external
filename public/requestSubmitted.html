@@ -150,9 +150,10 @@
                 <h2 class="mrgn-bttm-0">Tell us about your online experience</h2>
             </header>
             <div class="panel-body">
-                <div class="row">
+                <div class="row " >
                     <div class="col-md-1 col-sm-2 hidden-xs"><img src="../img/feedback.svg" alt=" "></div>
-                    <div class="col-md-11 col-sm-10">
+                    <div class="col-md-11 col-sm-10 ">
+                        <div id="cnt-feedback">
                         <p>We would love to hear your feedback on using this service.</p>
 
                         <div class="form-group">
@@ -172,6 +173,11 @@
                         </div>
 
                         <p><a href="#" class="btn btn-primary" id="btnSubmitFeedback">Submit feedback</a></p>
+                        </div>
+                        <div id="cnt-feedback-confirm" style="display:none" role="status">
+                        <p><span class="label label-success">Thank you for submitting your feedback and helping to improve our services!</span></p>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -475,6 +481,11 @@
                     $(this).removeClass("fieldError").next().html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + msgCharactersLeftStart + char + msgCharactersRemaining);
                 }
 
+            });
+
+            $("#btnSubmitFeedback").on("click", function() {
+                $("#cnt-feedback").hide();
+                $("#cnt-feedback-confirm").removeClass("hidden").fadeIn(500).focus();
             });
         });
     </script>
