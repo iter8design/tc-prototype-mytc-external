@@ -66,9 +66,13 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
+}
+
+h3 {
+    font-size: 20px;
 }
 
 label {
@@ -507,6 +511,24 @@ textarea.fieldError,
 }
 
 /* myTC specific */
+
+.panel.panel-info {
+    box-shadow: 3px 3px 5px #CCC;
+}
+
+.cn-certification {
+    background-color: #ffffcc;
+    padding: 20px;
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 5px #888;
+    border: 1px solid #ffcc33;
+    vertical-align: middle;
+}
+
+.cn-certification input[type=checkbox] {
+    margin-right: 10px;
+}
+
 
 hr {
     border-top-color: #d5e2e9;
