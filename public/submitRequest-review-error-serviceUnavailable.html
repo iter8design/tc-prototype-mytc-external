@@ -124,6 +124,14 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">Request an inspection of aviation equipment: review</h1>
 
+        <div class="alert alert-danger mrgn-bttm-md" role="status">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i>The payment processing service is currently unavailable. Please try again later or <a href="all/contactUs.html">contact us</a> for further information. </li>
+            </ol>
+        </div>
+
+
         <div class="row">
             <div class="col-md-12">
                 <section>
@@ -133,52 +141,51 @@
                             <nav>
                                 <ul class="nav nav-tabs">
 
-                                    <li role="presentation" class="completed">
+                                    <li role="presentation" class="complete" title="Step 1 - Applicant - Complete">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">1</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">Applicant - Complete</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
+                                        <div>
                                             <div class="step-label-bottom">Applicant</div>
                                         </div>
                                     </li>
 
-                                    <li role="presentation" class="completed">
+                                    <li role="presentation" class="complete" title="Step 2 - Equipment - Complete">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">2</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">Equipment - Complete</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
+                                        <div>
                                             <div class="step-label-bottom">Equipment</div>
                                         </div>
                                     </li>
 
-                                    <li role="presentation" class="active">
+                                    <li role="presentation" class="in-progress" title="Step 3 - Review - In progress">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">3</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">Review - In progress</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
-                                            <div class="step-label-bottom">REVIEW</div>
+                                        <div>
+                                            <div class="step-label-bottom">Review</div>
                                         </div>
                                     </li>
 
 
-                                    <li role="presentation" class="skipped">
-                                        <a href="#">
+                                    <li role="presentation" class="incomplete--no-nav" title="Step 4 - Payment - Incomplete">
+                                        <div>
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">4</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Incomplete</span>
                                             </span>
-                                        </a>
-                                        <div style="width:100%">
-                                            <div class="step-label-bottom">PAYMENT</div>
+                                        </div>
+
+                                        <div>
+                                            <div class="step-label-bottom">Payment</div>
                                         </div>
                                     </li>
-
-
                                 </ul>
                             </nav>
                         </div>
@@ -191,7 +198,9 @@
         <form name="summary" method="get" action="requestSubmitted.html">
 
             <h2>Your request</h2>
-            <p>Please verify that the following information is correct. When ready, press the <strong>Submit</strong> button.</p>
+            <p>Please verify that the following information is correct before you pay. When ready, press the <strong>Proceed to payment</strong> button.</p>
+            <p>Your total cost for this request will be <strong class="xlarge">$100.00</strong></p>
+
 
             <section class="panel panel-info panel-shadow">
                 <header class="panel-heading">
@@ -199,7 +208,7 @@
                         <div class="col-md-8 col-sm-8 col-xs-6">
                             <h3 class="mrgn-bttm-0 mrgn-tp-0">Applicant</h3>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Applicant</span></a></div>
+                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right" title="Edit Applicant"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Applicant</span></a></div>
 
                     </div>
 
@@ -227,7 +236,7 @@
                         <div class="col-md-8 col-sm-8 col-xs-6">
                             <h3 class="mrgn-bttm-0 mrgn-tp-0">Equipment</h3>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Equipment</span></a></div>
+                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right" title="Edit Equipment"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Equipment</span></a></div>
 
                     </div>
 
@@ -251,7 +260,7 @@
 
 
             <div class="nav-button">
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-primary" type="submit">Proceed to payment</button>
                 <a href="#" class="btn btn-link mrgn-lft-md">Go back</a>
             </div>
         </form>

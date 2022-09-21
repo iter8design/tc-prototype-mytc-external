@@ -128,7 +128,10 @@
             <h2>Transaction cancelled</h2>
             <p>Your transaction has been cancelled and <strong>was not completed</strong>. Common reasons this occurs include:</p>
             <ol class="fa-ul mrgn-tp-md">
-                <li><i class="fa-li fa fa-angle-right"></i>You may have exceeded your daily or weekly withdrawal transaction limit as set by your financial institution. Please contact them to verify your limits.</li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>You may have exceeded your credit card limit, or daily or weekly transaction limit as set by your financial institution. Please contact them to verify your limits.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Your credit card may be expired or locked by your financial institution. Please contact them to verify your credit card is active.</li>
+
                 <li><i class="fa-li fa fa-angle-right"></i>You cancelled the transaction.</li>
             </ol>
             <p class="mrgn-tp-md mrgn-bttm-md">Please try completing payment again.</p>
@@ -143,52 +146,51 @@
                             <nav>
                                 <ul class="nav nav-tabs">
 
-                                    <li role="presentation" class="completed">
+                                    <li role="presentation" class="complete" title="Step 1 - Applicant - Complete">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">1</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">Applicant - Complete</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
+                                        <div>
                                             <div class="step-label-bottom">Applicant</div>
                                         </div>
                                     </li>
 
-                                    <li role="presentation" class="completed">
+                                    <li role="presentation" class="complete" title="Step 2 - Equipment - Complete">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">2</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">Equipment - Complete</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
+                                        <div>
                                             <div class="step-label-bottom">Equipment</div>
                                         </div>
                                     </li>
 
-                                    <li role="presentation" class="active">
+                                    <li role="presentation" class="in-progress" title="Step 3 - Review - In progress">
                                         <a href="#">
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">3</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">Review - In progress</span>
                                             </span>
                                         </a>
-                                        <div style="width:100%">
-                                            <div class="step-label-bottom">REVIEW</div>
+                                        <div>
+                                            <div class="step-label-bottom">Review</div>
                                         </div>
                                     </li>
 
 
-                                    <li role="presentation" class="">
-                                        <a href="#">
+                                    <li role="presentation" class="incomplete--no-nav" title="Step 4 - Payment - Incomplete">
+                                        <div>
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">4</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Incomplete</span>
                                             </span>
-                                        </a>
-                                        <div style="width:100%">
-                                            <div class="step-label-bottom">PAYMENT</div>
+                                        </div>
+
+                                        <div>
+                                            <div class="step-label-bottom">Payment</div>
                                         </div>
                                     </li>
-
-
                                 </ul>
                             </nav>
                         </div>
@@ -211,7 +213,7 @@
                         <div class="col-md-8 col-sm-8 col-xs-6">
                             <h3 class="mrgn-bttm-0 mrgn-tp-0">Applicant</h3>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Applicant</span></a></div>
+                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right" title="Edit Applicant"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Applicant</span></a></div>
 
                     </div>
 
@@ -239,7 +241,7 @@
                         <div class="col-md-8 col-sm-8 col-xs-6">
                             <h3 class="mrgn-bttm-0 mrgn-tp-0">Equipment</h3>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Equipment</span></a></div>
+                        <div class="col-md-4 col-sm-4 col-xs-6"><a href="#" class="pull-right" title="Edit Equipment"><i class="fa-duotone fa-pen-to-square mrgn-rght-sm"></i>Edit <span class="wb-inv">Equipment</span></a></div>
 
                     </div>
 
@@ -334,10 +336,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

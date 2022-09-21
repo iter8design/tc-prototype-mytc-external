@@ -167,10 +167,10 @@
                                     </li>
 
 
-                                    <li role="presentation" class="incomplete--no-nav" title="Step 4 - Payment - Incomplete">
+                                    <li role="presentation" class="not-applicable" title="Step 4 - Payment - Not applicable">
                                         <div>
                                             <span class="round-tab">
-                                                <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Incomplete</span>
+                                                <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Not applicable</span>
                                             </span>
                                         </div>
 
@@ -178,6 +178,8 @@
                                             <div class="step-label-bottom">Payment</div>
                                         </div>
                                     </li>
+
+
                                 </ul>
                             </nav>
                         </div>
@@ -190,11 +192,9 @@
         <form name="summary" method="get" action="requestSubmitted.html">
 
             <h2>Your request</h2>
-            <p>Please verify that the following information is correct before you pay. When ready, press the <strong>Proceed to payment</strong> button.</p>
-            <p>Your total cost for this request will be <strong class="xlarge">$100.00</strong></p>
+            <p>Please verify that the following information is correct. When ready, press the <strong>Submit</strong> button.</p>
 
-
-             <section class="panel panel-info panel-shadow">
+            <section class="panel panel-info panel-shadow">
                 <header class="panel-heading">
                     <div class="row">
                         <div class="col-md-8 col-sm-8 col-xs-6">
@@ -252,7 +252,7 @@
 
 
             <div class="nav-button">
-                <button class="btn btn-primary" type="submit">Proceed to payment</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
                 <a href="#" class="btn btn-link mrgn-lft-md">Go back</a>
             </div>
         </form>
@@ -323,10 +323,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
