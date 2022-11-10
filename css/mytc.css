@@ -343,6 +343,15 @@ textarea.fieldError,
     border-color: #335075;
 }
 
+.panel-alert > .panel-heading {
+    background-color: #f3e9e8;
+    border-bottom: 1px solid #d3080c;
+}
+
+.panel.panel-alert {
+    border: 1px solid #d3080c;
+}
+
 .panel-primary {
     border-color: #335075;
 }
@@ -552,6 +561,7 @@ hr {
 }
 
 
+
 .hd-pre {
     font-size: 14px;
     text-transform: uppercase;
@@ -600,6 +610,19 @@ h3.hd-section {
     width: 1px;
 }
 
+.overlay-def .modal-title {
+    font-size: 1.5em;
+}
+
+.modal-body h3 {
+    margin-top: 10px;
+}
+
+.modal-footer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .panel-modes {
     box-shadow: 0 3px 0 0 rgb(222 222 222 / 50%);
 
@@ -634,6 +657,14 @@ h3.hd-section {
 
 }
 
+figure.thumbnail {
+    border-left: none;
+    background-color: #fafaff54;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+
 .thumbnail {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     transition: 0.3s;
@@ -664,6 +695,11 @@ h3.hd-section {
     cursor: none;
     box-shadow: none;
 }
+
+.thumbnail .caption {
+    text-align: center;
+}
+
 
 .wb-tabs [role=tablist] li {
     -webkit-border-top-left-radius: 5px;
@@ -805,6 +841,22 @@ h3.hd-section {
 #cn-accnt .account-number {
     font-size: 14px;
     font-weight: 700;
+}
+
+#helpBtn {
+    padding: 10px 8px;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    position: fixed;
+    outline: none;
+    z-index: 10;
+    top: 50%;
+    right: 15px;
+    line-height: normal;
 }
 
 @media (min-width: 768px) {
