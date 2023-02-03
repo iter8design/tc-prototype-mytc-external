@@ -144,7 +144,7 @@
 
             
             <fieldset class="gc-chckbxrdio">
-	<legend class="required">How can we help you today ? <strong class="required">(required)</strong></legend>
+	<legend class="required">How can we help you today? <strong class="required">(required)</strong></legend>
 	<ul class="list-unstyled lst-spcd-2">
 		<li class="radio">
 			<input type="radio" name="howtohelp" id="comment">
@@ -264,7 +264,7 @@
 		</li>
 		<li class="checkbox">
 			<input type="checkbox" id="accuracy">
-			<label for="accuracy">Accuracy of the service oor product received</label>
+			<label for="accuracy">Accuracy of the service or product received</label>
 		</li>
 		<li class="checkbox">
 			<input type="checkbox" id="fee">
@@ -279,8 +279,12 @@
 			<label for="staff">Staff behavior</label>
 		</li>
 		<li class="checkbox">
+			<input type="checkbox" id="timeliness">
+			<label for="timeliness">Timeliness of service provided</label>
+		</li>
+		<li class="checkbox">
 			<input type="checkbox" id="timelineness">
-			<label for="timelineness">Timelineness of service provided</label>
+			<label for="timelineness">Transport Canada policies, processes, or services</label>
 		</li>
 		<li class="checkbox">
 			<input type="checkbox" id="nature-other">
@@ -332,6 +336,14 @@
                   <div class="form-group">
 						<label for="greatServiceDesc">Describe the great service you received and what made it so. If possible, please provide the name of the individual who assisted you so we can let them know!</label>
 						<textarea rows="4" class="form-control full-width" id="greatServiceDesc" maxlength="250"></textarea>
+                     </div>
+
+                     <h2>Attachments</h2>
+                     <div class="form-group">
+                         <label for="attachments">Attach any documents to help us better understand your complaint, question, comment or suggestion if available.
+                         <span class="help-block">Maximum 3 files with a 256mb limit.  Allowable types include gif, jpg, jpeg, png, bmp, tif, pict, psd, txt, rtf, odf, pdf, doc, docx</span>
+                         </label>
+                         <input type="file" multiple="multiple" class="form-control" id="attachments" size="22">
                      </div>
                 
                 <h2>Permission to contact you</h2>

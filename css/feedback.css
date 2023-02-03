@@ -81,3 +81,8 @@ label {
     font-size: 22px;
     line-height: 1.1;
 }
+
+.help-block {
+    color: #777;
+    font-size: 0.8em;
+}
