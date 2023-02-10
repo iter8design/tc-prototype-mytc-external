@@ -652,6 +652,45 @@ h3.hd-section {
 
 }
 
+.panel.panel-info > .panel-body h4.panel-section {
+    color: #333;
+    border-bottom: 1px dotted #ccc;
+    margin-top: 20px;
+}
+
+.panel.panel-info > .panel-body h5 {
+    color: #31708f;
+    /* /border-left: 5px solid #2392a9;
+    border-bottom: 1px dotted #274061; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 1.1em;
+}
+
+.panel.panel-info > .panel-body h6 {
+    color: #31708f;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+
+
+.nested {
+    margin-top: 10px;
+    border-left: 5px solid #2392a9;
+    font-size: 0.9em;
+}
+
+.nested > .row {
+    padding-left: 10px;
+}
+
 figure.thumbnail {
     border-left: none;
     background-color: #fafaff54;
