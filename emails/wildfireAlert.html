@@ -103,6 +103,8 @@
             background-color: skyblue;
             color: white;
         }
+
+        .text-sentence-case {}
     </style>
 </head>
 
@@ -131,15 +133,15 @@
             <tr>
                 <th>Fire identifier <div lang="fr">Identificateur de feu</div>
                 </th>
-                <th>Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
-                <th>Area affected <div lang="fr">Zone affectée (ha)</div>
+                <th>Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
                 </th>
-                <th>Closest track (km) <div lang="fr">Voie ferrée la plus proche</div>
+                <th>Area affected <div lang="fr">Zone affectée (ha)</div>
                 </th>
                 <th>Closest track subdivision <div lang="fr">Subdivision ferroviaire la plus proche</div>
                 </th>
                 <th>Closest city <div lang="fr">Ville la plus proche</div>
                 </th>
+                <th>Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
             </tr>
         </thead>
         <tbody>
@@ -147,21 +149,20 @@
                 <td>
                     <a href="#">ZZZ-999-2023</a>
                 </td>
-                <td class="align-center">
-                    2023-01-01 00:00:00
+                <td class="align-right">
+                    0.999
                 </td>
                 <td class="align-right">
                     9999.9
-                </td>
-
-                <td class="align-right">
-                    9.999
                 </td>
                 <td>
                     {Track subdivision}
                 </td>
                 <td>
                     {City},{BC}
+                </td>
+                <td class="align-center">
+                    2023-01-01 00:00:00
                 </td>
 
             </tr>
@@ -169,21 +170,20 @@
                 <td>
                     <a href="#">ZZZ-999-2023</a>
                 </td>
-                <td class="align-center">
-                    2023-01-01 00:00:00
+                <td class="align-right">
+                    1.999
                 </td>
                 <td class="align-right">
                     9999.9
-                </td>
-
-                <td class="align-right">
-                    9.999
                 </td>
                 <td>
                     {Track subdivision}
                 </td>
                 <td>
                     {City},{BC}
+                </td>
+                <td class="align-center">
+                    2023-01-01 00:00:00
                 </td>
 
             </tr>
@@ -191,15 +191,11 @@
                 <td>
                     <a href="#">ZZZ-999-2023</a>
                 </td>
-                <td class="align-center">
-                    2023-01-01 00:00:00
+                <td class="align-right">
+                    2.999
                 </td>
                 <td class="align-right">
                     9999.9
-                </td>
-
-                <td class="align-right">
-                    9.999
                 </td>
                 <td>
                     {Track subdivision}
@@ -207,6 +203,10 @@
                 <td>
                     {City},{BC}
                 </td>
+                <td class="align-center">
+                    2023-01-01 00:00:00
+                </td>
+
             </tr>
         </tbody>
     </table>
@@ -225,7 +225,7 @@
                 <th>Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
                 <th>Area affected <div lang="fr">Zone affectée (ha)</div>
                 </th>
-                <th>Closest track (km) <div lang="fr">Voie ferrée la plus proche</div>
+                <th>Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
                 </th>
                 <th>Closest track subdivision <div lang="fr">Subdivision ferroviaire la plus proche</div>
                 </th>
@@ -238,15 +238,11 @@
                 <td>
                     <a href="#">ZZZ-999-2023</a>
                 </td>
-                <td class="align-center">
-                    2023-01-01 00:00:00
+                <td class="align-right">
+                    9.999
                 </td>
                 <td class="align-right">
                     9999.9
-                </td>
-
-                <td class="align-right">
-                    9.999
                 </td>
                 <td>
                     {Track subdivision}
@@ -254,6 +250,10 @@
                 <td>
                     {City},{BC}
                 </td>
+                <td class="align-center">
+                    2023-01-01 00:00:00
+                </td>
+
             </tr>
         </tbody>
     </table>
