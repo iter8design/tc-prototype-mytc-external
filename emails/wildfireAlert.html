@@ -105,7 +105,6 @@
         }
 
         .text-sentence-case {}
-
     </style>
 </head>
 
@@ -132,17 +131,17 @@
     <table style="border:1px solid #ccc; border-spacing:5;width:100%;max-width:1200px;vertical-align:top;display:inline-block;cellpadding=5;cellspacing=5">
         <thead>
             <tr>
-                <th>Fire identifier <div lang="fr">Identificateur de feu</div>
+                <th scope="col">Fire identifier <div lang="fr">Identificateur de feu</div>
                 </th>
-                <th>Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
+                <th scope="col">Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
                 </th>
-                <th>Area affected <div lang="fr">Zone affectée (ha)</div>
+                <th scope="col">Area affected <div lang="fr">Zone affectée (ha)</div>
                 </th>
-                <th>Closest track subdivision <div lang="fr">Subdivision ferroviaire la plus proche</div>
+                <th scope="col">Closest track subdivision & marker <div lang="fr">Subdivision ferroviaire et poste de marquage la plus proche</div>
                 </th>
-                <th>Closest city <div lang="fr">Ville la plus proche</div>
+                <th scope="col">Closest populated area <div lang="fr">Zone peuplée la plus proche</div>
                 </th>
-                <th>Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
+                <th scope="col">Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
             </tr>
         </thead>
         <tbody>
@@ -151,13 +150,13 @@
                     <a href="#">ZZZ-999-2023</a>
                 </td>
                 <td class="align-right">
-                    0.999
+                    0.999 km {W/O}
                 </td>
                 <td class="align-right">
-                    9999.9
+                    9999.9 ha
                 </td>
                 <td>
-                    {Track subdivision}
+                    {Track subdivision} (99km)
                 </td>
                 <td>
                     {City/town/village},{BC}
@@ -172,13 +171,13 @@
                     <a href="#">ZZZ-999-2023</a>
                 </td>
                 <td class="align-right">
-                    1.999
+                    1.999 km {E}
                 </td>
                 <td class="align-right">
-                    9999.9
+                    9999.9 ha
                 </td>
                 <td>
-                    {Track subdivision}
+                    {Track subdivision} (99km)
                 </td>
                 <td>
                     {City/town/village},{BC}
@@ -193,13 +192,13 @@
                     <a href="#">ZZZ-999-2023</a>
                 </td>
                 <td class="align-right">
-                    2.999
+                    2.999 km {N}
                 </td>
                 <td class="align-right">
-                    9999.9
+                    9999.9 ha
                 </td>
                 <td>
-                    {Track subdivision}
+                    {Track subdivision} (99km)
                 </td>
                 <td>
                     {City/town/village},{BC}
@@ -221,18 +220,17 @@
     <table style="border:1px solid #ccc; border-spacing:5;width:100%;max-width:1200px;vertical-align:top;display:inline-block;cellpadding=5;cellspacing=5">
         <thead>
             <tr>
-                <th>Fire identifier <div lang="fr">Identificateur de feu</div>
+                <th scope="col">Fire identifier <div lang="fr">Identificateur de feu</div>
                 </th>
-
-                <th>Area affected <div lang="fr">Zone affectée (ha)</div>
+                <th scope="col">Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
                 </th>
-                <th>Closest track <div lang="fr">Voie ferrée la plus proche (km) </div>
+                <th scope="col">Area affected <div lang="fr">Zone affectée (ha)</div>
                 </th>
-                <th>Closest track subdivision <div lang="fr">Subdivision ferroviaire la plus proche</div>
+                <th scope="col">Closest track subdivision & marker <div lang="fr">Subdivision ferroviaire et poste de marquage la plus proche</div>
                 </th>
-                <th>Closest populated area <div lang="fr">Zone peuplée la plus proche</div>
+                <th scope="col">Closest populated area <div lang="fr">Zone peuplée la plus proche</div>
                 </th>
-                <th>Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
+                <th scope="col">Start date/time <div lang="fr">Date/heure de début</div> (YYYY-MM-DD HH:MM UTC)</th>
             </tr>
         </thead>
         <tbody>
@@ -241,13 +239,13 @@
                     <a href="#">ZZZ-999-2023</a>
                 </td>
                 <td class="align-right">
-                    9.999
+                    9.999 km {NW/NO}
                 </td>
                 <td class="align-right">
-                    9999.9
+                    9999.9 ha
                 </td>
                 <td>
-                    {Track subdivision}
+                    {Track subdivision} (99km)
                 </td>
                 <td>
                     {City/town/village},{BC}
@@ -281,6 +279,4 @@
 
     <img border="0" width="105" height="25" style="width:1.0937in;height:.2604in;float:right" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_43/wet-boew/assets/wmms-blk.svg" alt="Symbol of the Government of Canada / Symbole du gouvernement du Canada">
 
-</body>
-
-</html>
+</body></html>
