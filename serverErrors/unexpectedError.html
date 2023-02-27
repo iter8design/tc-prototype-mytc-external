@@ -14,8 +14,8 @@
     <!-- Meta data-->
     <!-- Load closure template scripts -->
 
-    <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/soyutils.js"></script>
-    <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/wet-en.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/wet-en.js"></script>
     <noscript>
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverRefTop.html -->
@@ -25,13 +25,13 @@
         <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/cdtsfixes.css">
         <!--<![endif]-->
         <!--[if lt IE 9]>
-		<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/favicon.ico" rel="shortcut icon" />
-		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/css/ie8-theme-srv.min.css" />
+		<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/assets/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/css/ie8-theme-srv.min.css">
 		<![endif]-->
-        <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/css/noscript.min.css" />
+        <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/css/noscript.min.css">
     </noscript>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         document.write(wet.builder.serverRefTop({
             cdnEnv: "prod"
         }));
@@ -42,11 +42,11 @@
     <div id="def-top">
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverTop.html -->
-        <header role="banner">
+        <header>
             <div id="wb-bnr" class="container">
                 <div class="row">
                     <div class="brand col-xs-8 col-sm-9 col-md-6"> <a href="https://canada.ca">
-                            <object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg">
+                            <object type="image/svg+xml" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg">
                             </object>
                             <span class="wb-inv"> Government of Canada / Gouvernement du Canada</span></a> </div>
                 </div>
@@ -54,13 +54,13 @@
         </header>
     </div>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         var defTop = document.getElementById("def-top");
         defTop.outerHTML = wet.builder.serverTop({
             cdnEnv: "prod"
         });
     </script>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Body" -->
         <h1 class="wb-inv" id="wb-cont">HTTP Error 500 - Internal server error / <span lang="fr">Erreur HTTP 500 - Erreur du serveur interne</span></h1>
         <div class="row mrgn-tp-lg mrgn-bttm-lg">
@@ -98,7 +98,7 @@
                                 Transport Canada<br>
                                 Government of Canada</p>
                         </div>
-                        <p>Return to the <a href="">{Name of the service}</a></p>
+                        <p>Return to the <a href="#">{Name of the service}</a></p>
                     </section>
                     <section class="col-md-6" lang="fr">
                         <div class="well">
@@ -109,22 +109,22 @@
                             <h3>Téléphone</h3>
                             <p><abbr title="Téléphone">Tel</abbr>: <a href="tel:1-866-949-2262">1-866-949-2262</a> <br>
                                 Du lundi au vendredi (à l'exception des jours fériés), de 7 h 30 à 17 h 00, heure de l'Est</p>
-                            <p>{Nom de programme}<br />
-                                Transports Canada<br />
+                            <p>{Nom de programme}<br>
+                                Transports Canada<br>
                                 Gouvernement du Canada</p>
 
                         </div>
-                        <p>Retournez au <a href="">{Nom du service}</a>.</p>
+                        <p>Retournez au <a href="#">{Nom du service}</a>.</p>
                     </section>
-                    <section class="col-md-6">
+                    <div class="col-md-6">
                         <p class="mrgn-tp-lg"><strong>Date:</strong> <abbr title="Tuesday">Tue.</abbr> July 7, 2018 - 09:42:37 <abbr title="Eastern Time">ET</abbr></p>
-                    </section>
-                    <section class="col-md-6" lang="fr">
+                    </div>
+                    <div class="col-md-6" lang="fr">
                         <div class="mrgn-tp-lg mrgn-bttm-md clearfix">
                             <div class="pull-left"><strong>Date:</strong>&nbsp;</div>
                             <div class="pull-left capitalize"><abbr title="Mardi">mar.</abbr> 7 juillet 2018 - 09:42:37 <abbr title="Heure de l'Est">HE</abbr></div>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
     <div id="def-footer">
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverBottom.html -->
-        <footer role="contentinfo" id="wb-info">
+        <footer id="wb-info">
             <div id="transactFooter" class="landscape"></div>
             <div class="brand">
                 <div class="container">
@@ -149,14 +149,14 @@
         </footer>
     </div>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         var defFooter = document.getElementById("def-footer");
         defFooter.outerHTML = wet.builder.serverBottom({
             cdnEnv: "prod"
         });
     </script>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         document.write(wet.builder.refFooter({
             cdnEnv: "prod"
         }));
