@@ -150,7 +150,7 @@
                         <label for="licencePermit">Licence/permit name:</label>
                         <select class="form-control width100" id="licencePermit" name="licencePermit">
 
-                            <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
 
                         </select>
                     </div>
@@ -159,7 +159,8 @@
                         <label for="category">Licensing category:</label>
                         <select class="form-control width100" id="category" name="category">
 
-                            <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value=""></option>
 
                         </select>
                     </div>
@@ -168,8 +169,11 @@
                         <label for="aircraft">Aircraft you want to fly:</label>
                         <select class="form-control width100" id="aircraft" name="aircraft">
 
-                            <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-
+                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value=".aeroplane">Aeroplane</option>
+                            <option value=".balloon">Balloon</option>
+                            <option value=".helicopter">Helicopter</option>
+                            <option value=".gyroplane">Gyroplane</option>
                         </select>
                     </div>
 
@@ -388,7 +392,7 @@
             // quick search regex
             var qsRegex;
 
-            /* Setup the services filter
+            /* Setup the services filter */
             var $grid = $('#cn-exam-list').isotope({
                 // options
                 itemSelector: '.panel',
@@ -399,21 +403,28 @@
                     return searchResult;
                 }
             });
-             
+
 
             var $quicksearch = $('#sch-inp-ac').keyup(debounce(function() {
                 qsRegex = new RegExp($quicksearch.val(), 'gi');
                 $grid.isotope();
             }));
-           
+
 
             $grid.on('arrangeComplete', function() {
                 /* Display a default message when no challenges match */
-            if ($('#cn-exam-list').find("[class^='panel']:visible").length == 0) {
-                $("#cn-search-results-empty").fadeIn(300);
-            } else {
-                $("#cn-search-results-empty").fadeOut(300);
-            }
+                if ($('#cn-exam-list').find("[class='panel']:visible").length == 0) {
+                    $("#cn-search-results-empty").fadeIn(300);
+                } else {
+                    $("#cn-search-results-empty").fadeOut(300);
+                }
+            });
+
+            $("#category, #aircraft, #licencePermit").on("change", function() {
+                originatorFilter = $(this).children("option:selected").val();
+                $grid.isotope();
+            });
+
         });
 
 
@@ -432,10 +443,7 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

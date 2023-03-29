@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Review your payment - Transport Canada</title>
+    <title>Complete your payment - Transport Canada</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -74,7 +74,7 @@
                 <div class="row">
                     <section class="col-xs-12 col-sm-12">
                         <h2 class="wb-inv">Transport Canada myTC Account</h2>
-                        <a class="app-name" href="#">Transport Canada Online Payment
+                        <a class="app-name" href="#">Transport Canada
                         </a>
                     </section>
                     <!--<nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
@@ -108,46 +108,46 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">
-            <span class="hd-title">Review your payment</span>
+            <span class="hd-title">Complete your payment</span>
         </h1>
 
         <div class="row">
-            <div class="col-md-4 col-md-push-8">
+            <div class="col-md-5 col-md-push-7 col-sm-6 col-sm-push-6 col-xs-12">
                 <div id="payment-summary">
-                    <h2>Payment summary</h2>
+                    <h2><i class="fa-duotone fa-cart-shopping"></i> Payment summary</h2>
 
-                    <div class="row">
-                        <div class="col-md-8">Exam (SVC 99999999) <span class="badge display-inline"><span class="sr-only">Quantity </span>1</span></div>
-                        <div class="col-md-4 text-right">$35.00</div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 text-right">Subtotal</div>
-                        <div class="col-md-4 text-right">$35.00</div>
+                    <div class="row ">
+                        <div class="col-md-8 col-sm-8 col-xs-8 text-right">Exam (SVC 99999999) <span class="badge display-inline"><span class="sr-only">Quantity </span>1</span></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right">$35.00</div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 text-right">Taxes (HST 999999999 RT 0001):</div>
-                        <div class="col-md-4 text-right">$0.00</div>
+                    <div class="row subtotal">
+                        <div class="col-md-8 col-sm-8 col-xs-8 text-right">Subtotal:</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right">$35.00</div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 text-right xlarge">Total:</div>
-                        <div class="col-md-4 text-right xlarge"><strong>$35.00</strong></div>
+                    <div class="row border-bottom ">
+                        <div class="col-md-8 col-sm-8 col-xs-8 text-right">Taxes: <br><span class="small text-nowrap">HST# 999999999</span></div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right">$0.00</div>
+
+                    </div>
+                    <div class="row total">
+                        <div class="col-md-8 col-sm-8 col-xs-8 text-right xlarge">Total:</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right xlarge"><strong>$35.00</strong></div>
 
                     </div>
                 </div>
 
             </div>
 
-            <div class="col-md-8 col-md-pull-4">
+            <div class="col-md-7 col-md-pull-5 col-sm-6 col-sm-pull-6 col-xs-12">
 
                 <h2>Pay with your digital wallet</h2>
 
-                <button class="btn btn-black width20"><i class="fa-brands fa-apple-pay mrgn-rght-sm fa-2xl"></i></button>
-                <button class="btn btn-black width20"><i class="fa-brands fa-google-pay mrgn-rgfht-sm fa-2xl"></i></button>
+                <button class="btn btn-black width30 mrgn-rght-md text-nowrap">Pay with <i class="fa-brands fa-apple-pay mrgn-rght-sm fa-2xl"></i></button>
+                <button class="btn btn-black width30 text-nowrap">Pay with <i class="fa-brands fa-google-pay mrgn-rgfht-sm fa-2xl"></i></button>
 
-                <h2>Pay with your credit card</h2>
+                <h2 class="mrgn-tp-lg">Pay with your credit card</h2>
 
                 <p>VISA or Mastercard debit cards are not accepted.</p>
 
@@ -155,19 +155,19 @@
 
 
                 <div class="form-group">
-                    <label for="creditcard" class="display-block"><span class="mandatory">*</span>Credit card number <span class="wb-inv"> (required)</span>:</label>
+                    <label for="creditcard" class="display-block"><span class="mandatory" title="This field is required.">*</span>Credit card number <span class="wb-inv"> (required)</span>:</label>
                     <input name="creditcard" id="creditcard" type="text" size="20" class="form-control" autocomplete="cc-number" maxlength="16">
                 </div>
                 <div class="form-group">
-                    <label for="cardholder" class="display-block"><span class="mandatory">*</span>Name on card <span class="wb-inv"> (required)</span>:</label>
+                    <label for="cardholder" class="display-block"><span class="mandatory" title="This field is required.">*</span>Name on card <span class="wb-inv"> (required)</span>:</label>
                     <input name="cardholder" id="cardholder" type="text" size="50" class="form-control" autocomplete="cc-name" maxlength="150">
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <label for="expirationDate"><span class="mandatory">*</span> Expiration date (MM/YY) <span class="wb-inv"> (required):</span></label> <br><input name="expirationDate" id="expirationDate" type="text" size="5" class="form-control input-phone" autocomplete="cc-exp" maxlength="4">
+                    <div class="col-md-5 col-sm-7 col-xs-7">
+                        <label for="expirationDate"><span class="mandatory" title="This field is required.">*</span> Expiration date (MM/YY) <span class="wb-inv"> (required):</span></label> <br><input name="expirationDate" id="expirationDate" type="text" size="5" class="form-control input-phone" autocomplete="cc-exp" maxlength="4">
                     </div>
-                    <div class="col-md-3">
-                        <label for="cvv"><span class="mandatory">*</span> Security code <span class="wb-inv"> (required):</span></label><br>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <label for="cvv"><span class="mandatory" title="This field is required.">*</span> Security code <span class="wb-inv"> (required):</span></label><br>
                         <input name="cvv" id="cvv" type="text" size="5" class="form-control input-numeric-3" autocomplete="cc-csp" maxlength="3" title="Telephone number extension" placeholder="">
                     </div>
 
@@ -244,7 +244,10 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

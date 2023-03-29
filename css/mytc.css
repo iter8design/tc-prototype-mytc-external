@@ -138,8 +138,10 @@ thead tr {
     border-image: none;
 }
 
-.alert-info {
-    background: #dbedfe;
+
+
+.alert-info-section {
+    /* background: #dbedfe; */
     border-color: #269abc;
     border-image: none;
 }
@@ -149,6 +151,7 @@ thead tr {
     border-color: #278400;
     border-image: none;
 }
+
 
 /*App bar*/
 .app-bar {
@@ -902,6 +905,28 @@ figure.thumbnail {
     top: 50%;
     right: 15px;
     line-height: normal;
+}
+
+#payment-summary {
+    background-color: #EBF2FA;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 10px;
+    filter: drop-shadow(7px 3px 10px #AAA5A5);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#payment-summary .subtotal {
+    border-top: 1px solid #ccc;
+}
+
+#payment-summary .total {
+    border-top: 2px solid #666;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+
 }
 
 @media (min-width: 768px) {
