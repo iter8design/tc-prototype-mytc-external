@@ -402,8 +402,16 @@ tr.separator-bttm th {
     overflow-x: auto;
 }
 
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
 .overflow-hidden {
     overflow: hidden;
+}
+
+.scrollable {
+    overflow-y: scroll;
 }
 
 .pull-front {
@@ -697,6 +705,7 @@ tr.separator-bttm th {
 .bg-success {
     background-color: #FFC !important;
 }
+
 
 
 /*------------------------------------*\

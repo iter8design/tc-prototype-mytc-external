@@ -155,6 +155,11 @@ thead tr {
     background: #38414d;
 }
 
+.btn-black {
+    background-color: #000;
+    color: #fff;
+}
+
 .department-name {
     font-size: 16px;
 }
@@ -186,6 +191,8 @@ thead tr {
     display: -webkit-flex;
     display: flex;
 }
+
+
 
 input.fieldError,
 select.fieldError,
@@ -330,6 +337,10 @@ textarea.fieldError,
 
 .panel-default > .panel-heading {
     border-color: #ddd;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
 }
 
 .panel-default > .panel-footer {
