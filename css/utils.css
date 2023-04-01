@@ -347,6 +347,10 @@
     border-bottom-left-radius: 0px;
 }
 
+.brdr-rds-15{
+     border-radius: 15px;
+}
+
 .separator-bttm,
 tr.separator-bttm td,
 tr.separator-bttm th {

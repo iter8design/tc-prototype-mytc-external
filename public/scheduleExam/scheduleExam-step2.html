@@ -306,18 +306,18 @@
                     <div class="calendar-wk bg-grey-light pddng-sm mrgn-bttm-sm">
                         <div class="text-center">Week of <a href="#">July 3 to July 7,2023<i class="fa-duotone fa-calendar-week mrgn-lft-sm"></i></a></div>
                         <div class="row ">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-2 text-center pddng-md">Monday <div class="xlarge text-muted">3</div>
+                            <div class="col-md-1 col-xs-1"></div>
+                            <div class="col-md-2 col-xs-2 text-center pddng-md">Monday <div class="xlarge text-muted">3</div>
                             </div>
-                            <div class="col-md-2 text-center bg-info pddng-md">Tuesday <div class="xlarge fnt-wght-bld">4</div>
+                            <div class="col-md-2 col-xs-2 text-center bg-info pddng-md">Tuesday <div class="xlarge fnt-wght-bld">4</div>
                             </div>
-                            <div class="col-md-2 text-center pddng-md">Wednesday <div class="xlarge fnt-wght-bld">5</div>
+                            <div class="col-md-2 col-xs-2 text-center pddng-md">Wednesday <div class="xlarge fnt-wght-bld">5</div>
                             </div>
-                            <div class="col-md-2 text-center pddng-md">Thursday <div class="xlarge text-muted">6</div>
+                            <div class="col-md-2 col-xs-2 text-center pddng-md">Thursday <div class="xlarge text-muted">6</div>
                             </div>
-                            <div class="col-md-2 text-center pddng-md">Friday <div class="xxlarge fnt-wght-bld">7</div>
+                            <div class="col-md-2 col-xs-2 text-center pddng-md">Friday <div class="xxlarge fnt-wght-bld">7</div>
                             </div>
-                            <div class="col-md-1 text-center text-middle mrgn-tp-lg"><a href="#" title="View week of July 10 to July 14"><i class="fa-regular fa-circle-arrow-right fa-2xl"></i></a></div>
+                            <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg"><a href="#" title="View week of July 10 to July 14"><i class="fa-regular fa-circle-arrow-right fa-2xl"></i></a></div>
 
                         </div>
                     </div>
@@ -339,35 +339,38 @@
                     </fieldset>
                 </div>
             </div>
+        </div>
 
 
-            <div class="nav-button">
-                <a href="scheduleExam-step3.html" class="btn btn-primary disabled" type="submit" id="btnContinue">Continue</a>
-                <a href="scheduleExam-step1.html" class="btn btn-default mrgn-lft-md">Go back</a>
+        <div class="nav-button">
+            <a href="scheduleExam-step3.html" class="btn btn-primary disabled" type="submit" id="btnContinue">Continue</a>
+            <a href="scheduleExam-step1.html" class="btn btn-default mrgn-lft-md">Go back</a>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2023-03-24
+                            <!-- #EndDate -->
+                        </time>
+                        <span class="version">(V9.9.9)</span>
+                    </dd>
+                </dl>
+
             </div>
-
-
-
-
-            <div class="row">
-                <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
-                    <dl id="wb-dtmd">
-                        <dt>Date modified:&#32;</dt>
-                        <dd>
-                            <time property="dateModified">
-                                <!-- #BeginDate format:IS1 -->2023-03-24
-                                <!-- #EndDate -->
-                            </time>
-                            <span class="version">(V9.9.9)</span>
-                        </dd>
-                    </dl>
-
-                </div>
-                <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-                    <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
-                    </div>
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
                 </div>
             </div>
+        </div>
+
+
 
     </main>
     <footer role="contentinfo" id="wb-info">
@@ -417,7 +420,10 @@
             });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

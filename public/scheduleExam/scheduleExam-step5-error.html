@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Schedule an exam: Step 3 of 5 - Transport Canada</title>
+    <title>Error: Schedule an exam: Step 4 of 5 - Transport Canada</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -44,6 +44,7 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" href="../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -123,57 +124,75 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">Schedule an exam</span>
-            <span class="hd-title">STEP 3 OF 5</span>
+            <span class="hd-title">STEP 5 OF 5</span>
         </h1>
 
-        <h2>Eligibility</h2>
+
+        <div class="alert alert-danger mrgn-bttm-md" role="status">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>Please enter your first name.</a></li>
+                <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>Please enter your last name.</a></li>
+                <li><a href="#licenceNumber"><i class="fa-li fa fa-angle-right"></i>Please enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Please enter your email address.</a></li>
 
 
+                <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>The first name entered may not be greater than 50 characters.</a></li>
+                <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>The last name entered may not be greater than 50 characters.</a></li>
 
+                <li><a href="#licenceNumber"><i class="fa-li fa fa-angle-right"></i>The pilot licence or file number number entered must be 10 digits long.</a></li>
 
-        <p>To write the Recreational Pilot Permit (Aeroplane) RPPAE exam, you must meet the following requirements:
-        </p>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
 
-        <h3 class="hd-section"><i class="fa-duotone fa-files-medical"></i> Medical category</h3>
+                <li><i class="fa-li fa fa-angle-right"></i>Unfortunately, an error occurred with our payment processing services and we are unable to continue at this time. Please try again later or <a href="all/contactUs.html">contact us</a> for further information.</li>
+            </ol>
+        </div>
 
-        <p>This exam requires a medical category 1 or 3 certificate valid on or after your exam date of <strong>July 4th, 2023</strong>. </p>
+        <h2>Contact information</h2>
+        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
 
-        <p>Your certificate must have been issued within the last:</p>
-
-        <ul>
-            <li>5 years if under the age of 40 (issued after July 4th, 2018)</li>
-            <li>2 years if 40 years of age or older (issued after July 4th, 2021)</li>
-
-        </ul>
-
-        <h3 class="hd-section"><i class="fa-duotone fa-plane-tail"></i> Previous experience</h3>
-
-        <p>A minimum of <strong>10 hours of flight time</strong> is needed.</p>
-
-        <h3 class="hd-section"><i class="fa-duotone fa-pen-to-square"></i> Previous exam attempts</h3>
-
-        <p>If you've attempted this exam before, you may only rewrite it:</p>
-        <ul>
-            <li>14 days after the first attempt</li>
-            <li>30 days afther the second attempt</li>
-            <li>30 days, plus an additional 30 days for each attempt afterwards up to 180 days</li>
-        </ul>
-
-        <section class="cn-certification">
-            <div class="display-table-row vertical-align">
-                <div class="display-table-cell text-nowrap"><i class="fas fa-exclamation-circle fa-2x text-yellow mrgn-rght-sm hidden-xs"></i>
-                    <input name="certification" id="certification" type="checkbox" value="" class="mrgn-bttm-md">
+        <form method="get">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
+                    <input name="givenName" id="givenName" type="text" size="35" class="form-control fieldError" autocomplete="given-name" maxlength="50">
                 </div>
-                <div class="display-table-cell">
-                    <label for="certification" class="display-inline ">I certify that I meet all the eligibility criteria required to write this exam. Should Transport Canada determine that I do not meet the criteria required when I present myself for this exam, I will not be permitted to write the exam and any fees paid will be forfeited.</label>
+
+            </div>
+            <div class="form-group">
+                <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
+                <input name="familyName" id="familyName" type="text" size="35" class="form-control fieldError" autocomplete="family-name" maxlength="50">
+            </div>
+
+            <div class="form-group">
+
+                <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
+                <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
+                    <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="licenceNumber suffix" id="licenceNumber" size="11" maxlength="11" style="width: auto;">
+                </div>
+
+            </div>
+
+            <div class="form-group mrgn-tp-md">
+                <label for="email">Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
+                <input name="email" id="email" type="text" size="50" class="form-control fieldError" autocomplete="email" maxlength="150">
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
+                <div class="form-group form-inline">
+                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone fieldError" autocomplete="tel-national" maxlength="17">
                 </div>
             </div>
-        </section>
 
+
+        </form>
+
+        <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
 
         <div class="nav-button">
-            <a href="scheduleExam-step3-error.html" class="btn btn-primary" type="submit" id="btnContinue">Continue</a>
-            <a href="scheduleExam-step2.html" class="btn btn-default mrgn-lft-md">Go back</a>
+            <a href="payment.html" class="btn btn-primary" type="submit" id="btnContinue">Proceed to payment</a>
+            <a href="scheduleExam-step5.html" class="btn btn-default mrgn-lft-md">Go back</a>
         </div>
 
 
@@ -234,16 +253,33 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/bootstrap/transition.js"></script>
-    <script src="../../js/tc/bootstrap/collapse.js"></script>
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
+    <script src="../../js/tc/intl-tel-input/js/utils.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $("button").on("click", function() {
-                var location = $(this).data("location-title");
-                $("#locations").collapse("toggle");
-                $("#dateTime").collapse("toggle");
-                $("#headingOne a").append(": " + location) + " selected";
-                $("#btnContinue").removeClass("disabled");
+            $("#phone").intlTelInput({
+                initialCountry: "ca",
+                preferredCountries: ["ca", "us"],
+                formatOnInit: true,
+                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
+                        new Cleave('.input-phone', {
+                            placeholder: "-",
+                            blocks: [3, 3, 4],
+                            numericOnly: true
+                        });
+                        return "999-999-9999";
+                    } else {
+                        return selectedCountryPlaceholder;
+                    }
+
+                }
+            });
+
+            new Cleave('.input-numeric-10', {
+                blocks: [10],
+                numericOnly: true
             });
 
         });
