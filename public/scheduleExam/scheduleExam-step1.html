@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../../css/utils.css">
     <link rel="stylesheet" href="../../css/plugins.css">
     <link rel="stylesheet" href="../../css/wizard.css">
+    <link rel="stylesheet" href="../../css/chatbot.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -135,7 +136,7 @@
             <label for="sch-inp-ac" class="">Enter the name or code or the exam or select the type of licence/permit you are working towards, certiication type, or the aircraft you want to fly.</label>
         </p>
         <div class="input-group">
-            <input type="text" id="sch-inp-ac" placeholder="Find your exam..." class="form-control full-width" size="35">
+            <input type="text" id="sch-inp-ac" placeholder="Find your exam..." class="form-control full-width" size="35" autofocus>
             <span class="input-group-addon"><i class="fas fa-search"></i></span>
         </div>
 
@@ -145,69 +146,69 @@
             <div class="col-md-4 col-md-push-8">
                 <div class="bg-grey-light pddng-md brdr-rds-15">
                     <h3 class="mrgn-tp-0">Filter by:</h3>
-<form method="get">
-                    <div class="form-group">
-                        <label for="licencePermit">Licence/permit name:</label>
-                        <select class="form-control width100" id="licencePermit" name="licencePermit">
+                    <form method="get">
+                        <div class="form-group">
+                            <label for="licencePermit">Licence/permit name:</label>
+                            <select class="form-control width100" id="licencePermit" name="licencePermit">
 
-                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value=".ame">Aircraft Maintenance Engineer Licence</option>
-                            <option value=".amo">Aircraft Maintenance Officer (Person responsible for maintenance)</option>
-                            <option value=".bb">Balloon Licence</option>
-                            <option value=".cpl">Commercial Pilot Licence</option>
-                            <option value=".fd">Flight Dispatcher Licence</option>
-                            <option value=".fe">Flight Engineer Licence</option>
-                            <option value=".gg">Glider Licence</option>
-                            <option value=".instructorRating">Instructor Rating</option>
-                            <option value=".instrumentRating">Instrument Rating</option>
-                            <option value=".ppl">Private Pilot Licence</option>
-                            <option value=".rpp">Recreational Pilot Permit</option>
-                            <option value=".spp">Student Pilot Permit (for Aeroplanes, Balloons, Gyroplanes, or Helicopters</option>
-                            <option value=".typeRating">Type Rating</option>
-                            <option value=".pu">Ultra-light Aeroplane or Powered Parachute Licence</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="category">Licensing category:</label>
-                        <select class="form-control width100" id="category" name="category">
-
-                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-
-
-                            <option value=".licence">Licence</option>
-                            <option value=".permit">Permit</option>
-                            <option value=".foreign">Type or foreign conversion</option>
-
-                            <optgroup label="Rating">
+                                <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value=".ame">Aircraft Maintenance Engineer Licence</option>
+                                <option value=".amo">Aircraft Maintenance Officer (Person responsible for maintenance)</option>
+                                <option value=".bb">Balloon Licence</option>
+                                <option value=".cpl">Commercial Pilot Licence</option>
+                                <option value=".fd">Flight Dispatcher Licence</option>
+                                <option value=".fe">Flight Engineer Licence</option>
+                                <option value=".gg">Glider Licence</option>
                                 <option value=".instructorRating">Instructor Rating</option>
                                 <option value=".instrumentRating">Instrument Rating</option>
+                                <option value=".ppl">Private Pilot Licence</option>
+                                <option value=".rpp">Recreational Pilot Permit</option>
+                                <option value=".spp">Student Pilot Permit (for Aeroplanes, Balloons, Gyroplanes, or Helicopters</option>
                                 <option value=".typeRating">Type Rating</option>
-                            </optgroup>
+                                <option value=".pu">Ultra-light Aeroplane or Powered Parachute Licence</option>
+                            </select>
+                        </div>
 
-                        </select>
-                    </div>
-                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="category">Licensing category:</label>
+                            <select class="form-control width100" id="category" name="category">
 
-                        <label for="aircraft">Aircraft you want to fly:</label>
-                        <select class="form-control width100" id="aircraft" name="aircraft">
+                                <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
 
-                            <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value=".aeroplane">Aeroplane</option>
-                            <option value=".balloon">Balloon</option>
-                            <option value=".glider">Glider</option>
-                            <option value=".gyroplane">Gyroplane</option>
-                            <option value=".hangGlider">Hang glider</option>
-                            <option value=".helicopter">Helicopter</option>
-                            <option value=".ultralight">Ultra-light aeroplane</option>
 
-                        </select>
-                    </div>
+                                <option value=".licence">Licence</option>
+                                <option value=".permit">Permit</option>
+                                <option value=".foreign">Type or foreign conversion</option>
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-6"><button class="btn btn-primary btn-block" type="submit" id="btnFilter">Filter</button></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6"><button class="btn btn-default pull-right btn-block" type="reset" id="btnReset">Reset defaults</button></div>
-                    </div>
+                                <optgroup label="Rating">
+                                    <option value=".instructorRating">Instructor Rating</option>
+                                    <option value=".instrumentRating">Instrument Rating</option>
+                                    <option value=".typeRating">Type Rating</option>
+                                </optgroup>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="aircraft">Aircraft you want to fly:</label>
+                            <select class="form-control width100" id="aircraft" name="aircraft">
+
+                                <option value="*" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value=".aeroplane">Aeroplane</option>
+                                <option value=".balloon">Balloon</option>
+                                <option value=".glider">Glider</option>
+                                <option value=".gyroplane">Gyroplane</option>
+                                <option value=".hangGlider">Hang glider</option>
+                                <option value=".helicopter">Helicopter</option>
+                                <option value=".ultralight">Ultra-light aeroplane</option>
+
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6"><button class="btn btn-primary btn-block" type="submit" id="btnFilter">Filter</button></div>
+                            <div class="col-md-6 col-sm-6 col-xs-6"><button class="btn btn-default pull-right btn-block" type="reset" id="btnReset">Reset defaults</button></div>
+                        </div>
                     </form>
                 </div>
 
@@ -225,7 +226,35 @@
                     <p><strong>Hours of operation:</strong><br>
                         Monday to Friday <br>
                         8:30am to 4:30pm <abbr title="Eastern Time">ET</abbr></p>
+
+
+                    <!--<div id="live-engage-button">
+                        <div>
+                            <a href="javascript:openChat();">
+                                <span id="live-engage-button-icon">
+                                    <i class="fa-duotone fa-comments fa-xl"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="live-engage-button-text">
+                            <span>Chat with a <abbr title="Transport Canada">TC</abbr> agent</span>
+                        </div>
+                    </div>
+
+                    <div id="live-chat-window">
+                        <div id="live-chat-box"></div>
+                        <div id="live-chat-window-Header">
+                            <div id="live-chat-window-header-title">
+                                <span id="live-chat-window-header-title-text">Transport Canada - How can we help you?</span>
+                            </div>
+                            <div id="live-chat-window-close">
+                                <a href="javascript:closeChat();"><i class="fa-duotone fa-square-xmark"></i></a>
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
+
+
 
             </div>
             <div class="col-md-8 col-md-pull-4 col-sm-12">
@@ -339,14 +368,14 @@
                         </div>
                     </div>
                 </div>
- <div id="cn-search-results-empty">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="mrgn-tp-sm">No exams found!</h3>
-                        <p>Sorry, but we couldn't find any exams that match the filters selected. Try a different combination! </p>
+                <div id="cn-search-results-empty">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="mrgn-tp-sm">No exams found!</h3>
+                            <p>Sorry, but we couldn't find any exams that match the filters selected. Try a different combination! </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </div>
 
@@ -375,8 +404,8 @@
 
             </div>
             <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
-                </div>
+                <!--<div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>-->
             </div>
         </div>
     </main>
@@ -414,6 +443,7 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
@@ -468,11 +498,11 @@
 
             });
 
-             $("#aircraft").on("change", function() {
+            $("#aircraft").on("change", function() {
                 aircraftResult = $(this).children("option:selected").val();
             });
 
-             $("#licencePermit").on("change", function() {
+            $("#licencePermit").on("change", function() {
                 licencePermitResult = $(this).children("option:selected").val();
             });
 
@@ -483,12 +513,67 @@
             });
 
             $("#btnReset").on("click", function(e) {
-                categoryResult="";
-                aircraftResult="";
-                licencePermitResult="";
+                categoryResult = "";
+                aircraftResult = "";
+                licencePermitResult = "";
 
                 $grid.isotope();
             });
+
+
+            const styleOptions = {
+                // Add styleOptions to customize Web Chat canvas
+                hideUploadButton: true,
+                botAvatarInitials: "TC",
+                userAvatarInitials: "You",
+                backgroundColor: "rgba(255,255,255,0.85)",
+            };
+
+            // Add your BOT ID below
+            var BOT_ID = "8fe35793-7686-4e31-af3f-4f2a7f249232";
+            var theURL = "https://powerva.microsoft.com/api/botmanagement/v1/directline/directlinetoken?botId=" + BOT_ID;
+
+            /*const store = window.WebChat.createStore({},
+                ({
+                    dispatch
+                }) => next => action => {
+                    if (action.type === "DIRECT_LINE/CONNECT_FULFILLED") {
+                        dispatch({
+                            meta: {
+                                method: "keyboard",
+                            },
+                            payload: {
+                                activity: {
+                                    channelData: {
+                                        postBack: true,
+                                    },
+                                    //Web Chat will show the 'Greeting' System Topic message which has a trigger-phrase 'hello'
+                                    name: 'startConversation',
+                                    type: "event"
+                                },
+                            },
+                            type: "DIRECT_LINE/POST_ACTIVITY",
+                        });
+                    }
+                    return next(action);
+                }
+            ); */
+
+            /*fetch(theURL)
+                .then((response) => response.json())
+                .then((conversationInfo) => {
+                    window.WebChat.renderWebChat({
+                            directLine: window.WebChat.createDirectLine({
+                                token: conversationInfo.token,
+                            }),
+                            store: store,
+                            styleOptions,
+                        },
+                        //document.getElementById("webchat")
+                        document.getElementById("live-chat-box")
+                    );
+                })
+                .catch((err) => console.error("An error occurred: " + err)); */
 
         });
 
@@ -498,16 +583,14 @@
             //console.log($("#cn-exam-list .col-md-12:visible").length);
             if (numberDisplayed > 0) {
                 var examCount = parseInt($("#examCount"));
-                if (examCount == numberDisplayed){
+                if (examCount == numberDisplayed) {
                     $("#displayingNumber").text("");
-                }
-                else {
+                } else {
                     $("#displayingNumber").text(", displaying " + numberDisplayed);
                 }
 
-            }
-            else {
-                 $("#displayingNumber").text("");
+            } else {
+                $("#displayingNumber").text("");
             }
         }
 
@@ -528,9 +611,16 @@
             };
         }
 
-    </script>
-    <!-- InstanceEndEditable -->
-</body>
-<!-- InstanceEnd -->
+        function openChat() {
+            $("#live-chat-window").css("display", "block");
+            $("#live-engage-button").css("display", "none");
+        };
 
-</html>
+        function closeChat() {
+            $("#live-chat-window").css("display", "none");
+            $("#live-engage-button").css("display", "visible");
+        };
+    </script>
+
+
+</body></html>

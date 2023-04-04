@@ -39,7 +39,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css">
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -52,7 +52,7 @@
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
-    <header role="banner">
+    <header>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -87,7 +87,7 @@
         </div>
         <div class="app-bar-mb">
             <div class="container visible-xs-block hidden-print">
-                <nav role="navigation">
+                <nav>
                     <!-- Adjust the following depending on search and/or menu settings -->
                     <h2 class="wb-inv">Search and menu</h2>
                     <ul class="app-list-main list-unstyled">
@@ -99,10 +99,10 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
-        <nav role="navigation" id="wb-bc" property="breadcrumb">
+        <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
                 <div class="row">
@@ -118,7 +118,7 @@
             </div>
         </nav>
     </header>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">
             <!--<span class="hd-pre">{First name} {Last name}</span>-->
@@ -217,7 +217,7 @@
             </div>
         </div>
     </main>
-    <footer role="contentinfo" id="wb-info">
+    <footer id="wb-info">
         <div id="transactFooter" class="landscape"></div>
         <div class="brand">
             <div class="container">
@@ -256,7 +256,10 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
