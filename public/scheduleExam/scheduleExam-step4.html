@@ -156,7 +156,7 @@
                         <h4 class="mrgn-tp-sm">Taking place at:</h4>
 
                         <address class="mrgn-tp-sm">Victoria (North Saanich) <br> 103-1962 Canso Road <br> North Saanich, BC V8L 5V5</address>
-                        <a href="#" title="View this location on a map in a new window." target="_blank"><i class="fa-duotone fa-map-location-dot mrgn-rght-sm"></i>View map</a>
+                        <a href="https://www.google.com/maps?q=48.64537917,-123.4189617" title="View this location on a map in a new window." target="_blank"><i class="fa-duotone fa-map-location-dot mrgn-rght-sm"></i>View map</a>
                     </div>
 
                 </div>
@@ -173,6 +173,25 @@
             <a href="scheduleExam-step1.html" class="btn btn-default mrgn-lft-md">Schedule another exam</a>
         </div>
 
+        <section id="dlg-outOfTime" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Out of time</h2>
+            </header>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Unfortunately, your appointment wasn't confirmed in the time given. You'll need to select an appointment location, date, and time again.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="scheduleExam-step2.html" class="btn btn-primary pull-left">Choose a location, date and time</a>
+                <a href="serviceInitiation.html" class="btn btn-default pull-left">Cancel</a>
+            </footer>
+        </section>
 
 
 
@@ -237,7 +256,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
             // Set the date we're counting down to
-            var countDownDate = new Date().getTime() + 15 * 60 * 1000;
+            var countDownDate = new Date().getTime() + 1 * 60 * 1000;
 
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -250,16 +269,29 @@
 
                 // Time calculations for hours, minutes and seconds
 
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-CA', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                  });
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000).toLocaleString('en-CA', {
+                    minimumIntegerDigits: 2,
+                    useGrouping: false
+                  })
 
                 // Display the result in the element with id="demo"
                 $("#countDown").html(minutes + ":" + seconds);
 
                 // If the count down is finished, write some text
                 if (distance < 0) {
+                    $(document).trigger("open.wb-lbx", [
+                        [{
+                            src: "#dlg-outOfTime",
+                            type: "inline"
+                        }], true
+                    ]);
                     clearInterval(x);
-                    //Display dialog to redirect back to exam date/time selection.
+                    
+                   
                 }
             }, 1000);
         });
