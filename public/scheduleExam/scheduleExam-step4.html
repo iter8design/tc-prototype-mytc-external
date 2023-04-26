@@ -173,6 +173,7 @@
             <a href="scheduleExam-step1.html" class="btn btn-default mrgn-lft-md">Schedule another exam</a>
         </div>
 
+
         <section id="dlg-outOfTime" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">Out of time</h2>
@@ -188,12 +189,9 @@
 
             </div>
             <footer class="modal-footer">
-                <a href="scheduleExam-step2.html" class="btn btn-primary pull-left">Choose a location, date and time</a>
-                <a href="serviceInitiation.html" class="btn btn-default pull-left">Cancel</a>
+                <a href="scheduleExam-step2.html" class="btn btn-primary pull-left popup-modal-dismiss" id="btnOutOfTime">Choose a location, date and time</a>
             </footer>
         </section>
-
-
 
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
@@ -272,11 +270,11 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-CA', {
                     minimumIntegerDigits: 2,
                     useGrouping: false
-                  });
+                });
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000).toLocaleString('en-CA', {
                     minimumIntegerDigits: 2,
                     useGrouping: false
-                  })
+                })
 
                 // Display the result in the element with id="demo"
                 $("#countDown").html(minutes + ":" + seconds);
@@ -289,11 +287,17 @@
                             type: "inline"
                         }], true
                     ]);
+
                     clearInterval(x);
-                    
-                   
                 }
+
             }, 1000);
+
+            $(document).on("mfpClose", function(event) {
+                var src = $.magnificPopup.instance.items[0].src;
+                window.location = $("#btnOutOfTime").attr("href");
+            });
+
         });
 
     </script>
