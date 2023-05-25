@@ -347,8 +347,8 @@
     border-bottom-left-radius: 0px;
 }
 
-.brdr-rds-15{
-     border-radius: 15px;
+.brdr-rds-15 {
+    border-radius: 15px;
 }
 
 .separator-bttm,
@@ -603,6 +603,10 @@ tr.separator-bttm th {
     color: #8a61a2;
 }
 
+.text-blue {
+    color: #284162;
+}
+
 .text-default {
     color: #000;
 }
@@ -615,7 +619,8 @@ tr.separator-bttm th {
     color: #ffa21a;
 }
 
-.text-priority-low {
+.text-priority-low,
+.text-orange {
     color: #78ccff;
 }
 
@@ -628,11 +633,15 @@ tr.separator-bttm th {
 }
 
 .text-grey {
-    color: #999;
+    color: #ccc;
 }
 
 .text-dark-grey {
     color: #666;
+}
+
+.text-info {
+    color: #1c538c;
 }
 
 .text-blue {
@@ -663,7 +672,7 @@ tr.separator-bttm th {
 }
 
 .text-red {
-    color: #900;
+    color: #a94442;
 }
 
 .text-orange {

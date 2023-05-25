@@ -1,9 +1,9 @@
 /*------------------------------------*\
     PLUGINS
-	
-	Used to override the CSS used in any plugin.  This will keep the main CSS file simpler, and ensure that any plugin CSS 
+
+	Used to override the CSS used in any plugin.  This will keep the main CSS file simpler, and ensure that any plugin CSS
 	customizations are not lost when libraries are upgraded.
-	
+
 \*------------------------------------*/
 
 
@@ -108,7 +108,7 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 }
 
 /* .dataTables_wrapper a:hover {
-	color: #fff;	
+	color: #fff;
 } */
 
 /* .panel table.dataTable,
@@ -227,7 +227,7 @@ table.dataTable.no-footer {
 
 
 /*------------------------------------*\
-    SELECT 2	
+    SELECT 2
 \*------------------------------------*/
 
 .panel-primary .panel-heading .select2-container .select2-choice > .select2-chosen {
@@ -324,3 +324,19 @@ div.mce-fullscreen {
     position: fixed;
 	background: #0b0b0b!important;
 } */
+
+/*------------------------------------*\
+   JQUERY UI
+\*------------------------------------*/
+
+.ui-datepicker-trigger {
+    border: none;
+    background: none;
+}
+
+.ui-datepicker-calendar tr:hover td a {
+    border: 1px solid #cccccc;
+    background: #ededed;
+    font-weight: normal;
+    color: #2b2b2b;
+}
