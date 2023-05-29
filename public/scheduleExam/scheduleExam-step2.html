@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../../css/utils.css">
     <link rel="stylesheet" href="../../css/plugins.css">
     <link rel="stylesheet" href="../../css/wizard.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/redmond/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/redmond/jquery-ui.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -304,12 +304,13 @@
                         <p>We've selected the first available date with appointments at this location, but you may select a different date/time that suits your schedule.</p>
 
                         <div class="week-picker calendar-wk bg-grey-light pddng-sm mrgn-bttm-sm">
+                           <div id="#cn-wk">
                             <div class=" text-center">Week of <a href="#" id="selectWeek" title="Select a week"><span id="weekDisplayed">July 3 to July 7,2023</span><i class="fa-solid fa-calendar-week mrgn-lft-sm"></i></a>
                             <input id="selectedWeek" type="hidden" />
                             </div>
                             <div id="wk-days" class="row">
                                 <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg">
-                                    <a href="#" id="lnk-prv-wk" data-period-start="2023-06-25" data-period-end="2023-07-02" title="View week of June 25 to July 2"><i class="fa-regular fa-arrow-alt-circle-left fa-2xl"></i></a>
+                                    <a href="#" id="lnk-prv-wk" data-period-start="2023-06-25" data-period-end="2023-07-01" title="View week of June 25 to July 1"><i class="fa-regular fa-arrow-alt-circle-left fa-2xl"></i></a>
 
                                 </div>
                                 <div class="col-md-2 col-xs-2 text-center pddng-md">Monday
@@ -327,8 +328,9 @@
                                     <div class="xlarge text-muted" title="No appointments available on Thursday, July 6" data-date="2023-07-06T00:00:00">6</div>
                                 </div>
                                 <div class="col-md-2 col-xs-2 text-center pddng-md">Friday <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-07T00:00:00">7</a></div>
-                                <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg"><a href="#" id="lnk-nxt-wk" data-period-start="2023-07-10" data-period-end="2023-07-14" title="View week of July 10 to July 14"><i class="fa-regular fa-arrow-alt-circle-right fa-2xl"></i></a></div>
+                                <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg"><a href="#" id="lnk-nxt-wk" data-period-start="2023-07-09T00:00:00" data-period-end="2023-07-15T00:00:00" title="View week of July 9 to July 15"><i class="fa-regular fa-arrow-alt-circle-right fa-2xl"></i></a></div>
                             </div>
+                        </div>
                         </div>
 
                         <p><i class="fa-regular fa-clock"></i> Duration: Up to 3 hours</p>
@@ -428,7 +430,7 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/bootstrap/transition.js"></script>
     <script src="../../js/tc/bootstrap/collapse.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
@@ -440,20 +442,29 @@
                 $("#btnContinue").removeClass("disabled");
             });
 
+        
+            
             //Load next week with first day of the week selected, refresh timeslots
-            /* $("#lnk-nxt-wk").on("click", function(event) {
+            $("#lnk-nxt-wk, lnk-prv-wk").on("click", function(event) {
                 event.preventDefault();
-                $("#wk-days").hide("slide", {
+                
+                var periodStart = $(this).data("period-start");
+                console.log(periodStart);
+                changeWeek(periodStart);
+                /* $("#wk-days").hide("slide", {
                     direction: "right"
                 }, 500, function() {
-                    console.log("DONE!");
-                    $("#wk-days").find("[data-date]").each(function() {
-                        var date = new Date($(this).data("date")) - 7;
+                    console.log("DONE!"); */
+                    
+                    
+                    /* $("#wk-days").find("[data-date]").each(function() {
+                        var date = new Date($(this).data("date")) - 7; 
+                    
 
                     });
 
-                });
-            }); */
+                });*/
+            }); 
 
             //Load previous week with first day of the week selected, refresh timeslots
             /*$("#lnk-prv-wk").on("click", function(event) {
@@ -487,6 +498,8 @@
                     $(".gc-chckbxrdio>ul").append(timeslotTemplate);
                 }
 
+                //Select the first one
+                $(".gc-chckbxrdio>ul>li:first-child>input[type=radio]").attr("checked", true);
                 // Bring the timeslots back into view
                 $("#cn-timeslots").show("slide");
             });
@@ -501,18 +514,16 @@
                 }, 1);
             }
 
-            //List of all days with no appointments available
-            var disabledDays = ["7-13-2023", "7-14-2023"];
+
             var txtTo = " to ";
-            var txtWeekOf = "Week of";
+            var txtNoAppointments = "No appointments available";
             
             $('#selectedWeek').datepicker({
                 showOtherMonths: true,
                 numberOfMonths: 3,
                 selectOtherMonths: true,
                 showOn: "button",
-                buttonText: "", 
-                //dateFormat: 'yy-mm-dd',
+                buttonText: "",
                 onSelect: function(dateText, inst) {
                     var date = $(this).datepicker('getDate');
                     startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay());
@@ -527,30 +538,12 @@
                     $("#weekDisplayed").html(displayStartDate + txtTo + displayEndDate);
                     selectCurrentWeek(); 
                 },
-                /*beforeShowDay: function(date) {
-                    
-                    //Disable all weekends
-                    var day = date.getDay();
-                     if ((day == 6) ||  (day == 7)) {
-                     return [false,"","No appointments available"] ; 
-                     } else { 
-                     return [true] ;
-                     } 
-                    
-                    //Disable all days with no appointments
-                    
-                    
-                    //Highlight current day
-                    var cssClass = '';
-                    if (date >= startDate && date <= endDate)
-                        cssClass = 'ui-datepicker-current-day';
-                    return [true, cssClass];
-                },*/
+
                 beforeShowDay: function(date) {
                     //Disable all weekends
                     var day = date.getDay();
                      if ((day == 6) ||  (day == 0)) {
-                     return [false,"","No appointments available"] ; 
+                     return [false,"",txtNoAppointments] ;
                      } else { 
                      return [true] ;
                      } 
@@ -575,6 +568,27 @@
         
         });
         
+        function changeWeek(selectedDay) {
+            var weekView = $("#wk-days").clone();
+     
+            $(weekView).find("[data-date]").each(function() {
+                var date = $(this).attr("data", date);
+               
+            });
+            
+            $("#wk-days").hide("slide", {
+                    direction: "right"
+                }, 500, function() {
+                     $("#cn-wk").append(weekView);
+            });
+            
+            $("#wk-days").show("slide", {
+                    direction: "left"
+                }, 500, function() {
+
+             }); 
+        }
+
        
            
 
