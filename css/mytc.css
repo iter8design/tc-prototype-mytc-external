@@ -95,13 +95,15 @@ thead tr {
 
 .alert-danger,
 .alert-info,
-.alert-success {
+.alert-success,
+.alert-warning {
     margin-left: 0px;
 }
 
 .alert-danger::before,
 .alert-info::before,
-.alert-success::before {
+.alert-success::before,
+.alert-warning::before {
     line-height: 1.8em;
     margin-left: -0.2em;
 
@@ -114,7 +116,8 @@ thead tr {
 
 .alert-danger > :first-child:not(details, h2),
 .alert-info > :first-child:not(details, h2),
-.alert-success > :first-child:not(details, h2) {
+.alert-success > :first-child:not(details, h2),
+.alert-warning > :first-child:not(details, h2) {
     margin-left: 2.2em;
 }
 
@@ -150,13 +153,30 @@ thead tr {
     /* background: #dbedfe; */
     border-color: #269abc;
     border-image: none;
+    background-clip: border-box;
 }
 
 .alert-success {
     background: #d8eeca;
     border-color: #278400;
     border-image: none;
+    background-clip: border-box;
 }
+
+.alert-warning {
+    background: #f9f4d4;
+    border-color: #f90;
+    border-image: none;
+    background-clip: border-box;
+}
+
+.alert-info {
+    background-color: #dbedfe;
+    border-color: #269abc;
+    border-image: none;
+    background-clip: border-box;
+}
+
 
 
 /*App bar*/
