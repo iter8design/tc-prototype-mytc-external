@@ -87,6 +87,12 @@ thead tr {
     display: none;
 }
 
+.alert {
+    margin-left: 0;
+    padding-right: 15px;
+    box-shadow: 3px 3px 5px #888;
+}
+
 .alert-danger,
 .alert-info,
 .alert-success {
