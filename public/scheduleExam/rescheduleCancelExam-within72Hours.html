@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Schedule an exam: Step 5 of 5 - Transport Canada</title>
+    <title>Reschedule or cancel an exam - Transport Canada</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -44,7 +44,6 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" href="../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -113,7 +112,8 @@
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Aviation</a></li>
                         <li><a href="#">Licensing for pilots and personnel</a></li>
-                        <li>Schedule an exam</li>
+                        <li><a href="#">Schedule an exam</a></li>
+                        <li>Reschedule or cancel an exam</li>
 
                     </ol>
                 </div>
@@ -123,55 +123,83 @@
     <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">
-            <span class="hd-pre">Schedule an exam</span>
-            <span class="hd-title">STEP 5 OF 5</span>
+            <span class="hd-title">Reschedule or cancel an exam</span>
         </h1>
 
-        <h2>Contact information</h2>
-        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
 
-        <form method="get">
-            <div class="form-group">
-                <div class="form-group">
-                    <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
-                    <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50">
+        <div class="alert alert-warning mrgn-bttm-md">
+            <h2>Warning</h2>
+            <p>This exam appointment is scheduled within the next <strong>3 business days</strong>. Changing or cancelling this appointment now will forfeit any fees paid.</p>
+            <p>If you become ill or have a compelling reason for missing your exam appointment, please <a href="serviceInitiation.html">contact us</a> with the reason for your absence by means of a medical certificate or similar proof to reschedule without incurring a fee. </p>
+        </div>
+
+        <div class="panel panel-default mrgn-bttm-md">
+            <header class="panel-heading">
+                <h3 class="panel-title mrgn-0">Recreational Pilot Permit (Aeroplane)
+                    <span class="pull-right">RPPAE</span>
+                </h3>
+            </header>
+            <div class="panel-body">
+                <p>Operate single pilot, non high-performance aeroplanes under visual meteorological conditions with no more than one passenger on board.</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h4 class="mrgn-tp-sm">Scheduled for:</h4><span class="xlarge">8:30am to 11:30am <abbr title="Pacific Time">PT</abbr> (3 hours)</span>
+
+
+
+                        <h4 class="mrgn-tp-md">On:</h4>
+                        <div class="xlarge mrgn-bttm-lg">July 4, 2023</div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <h4 class="mrgn-tp-sm">Taking place at:</h4>
+
+                        <address class="mrgn-tp-sm">Victoria (North Saanich) <br> 103-1962 Canso Road <br> North Saanich, BC V8L 5V5</address>
+                        <a href="https://www.google.com/maps?q=48.64537917,-123.4189617" title="View this location on a map in a new window." target="_blank"><i class="fas fa-map-marked-alt mrgn-rght-sm"></i>View map</a>
+                    </div>
+
                 </div>
+            </div>
+            <footer class="panel-footer">
+                <a href="#dlg-rescheduleAppointment" class="btn btn-default wb-lbx"><i class="fas fa-calendar-day"></i> Change this appointment <span class="sr-only"> on July 4,2023 at 8:30am for a Recreational Pilot Permit (Aeroplane)</span></a>
+
+                <a href="#dlg-cancelAppointment" class="btn btn-link mrgn-lft-md wb-lbx"><i class="fas fa-calendar-times mrgn-rght-sm"></i>Cancel this appointment</a>
+            </footer>
+        </div>
+
+        <section id="dlg-rescheduleAppointment" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Change exam appointment</h2>
+            </header>
+            <div class="modal-body">
+                <p>You are about to change this exam appointment. Because this exam appointment occurs within 3 business days, any fees paid will not be refunded and you will have to pay again.</p>
 
             </div>
-            <div class="form-group">
-                <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
-                <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50">
+            <footer class="modal-footer">
+                <a href="scheduleExam-step2.html" class="btn btn-primary pull-left"><i class="fa-solid "></i> Change appointment </a>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid "></i> Let me think about this...</a>
+            </footer>
+        </section>
+
+
+        <section id="dlg-cancelAppointment" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Cancel exam appointment</h2>
+            </header>
+            <div class="modal-body">
+                <p>You are about to cancel this exam appointment. If you still need to take this exam, you may <a href="scheduleExam-step2.html">reschedule this appointment</a> for another suitable date and time instead.</p>
+
+                <p>Because this exam appointment occurs within 3 business days, your fees paid will not be refunded.</p>
+
             </div>
-
-            <div class="form-group">
-
-                <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
-                <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
-                    <input type="text" class="form-control input-numeric-6" aria-describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;">
-                </div>
-
-            </div>
-
-            <div class="form-group mrgn-tp-md">
-                <label for="email">Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
-                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
-            </div>
-            <div class="form-group">
-                <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
-                <div class="form-group form-inline">
-                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17">
-                </div>
-            </div>
-
-            <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
-
-            <div class="nav-button">
-                <a href="scheduleExam-step5-error.html" class="btn btn-primary" id="btnContinue">Proceed to payment</a>
-                <a href="scheduleExam-step5.html" class="btn btn-default mrgn-lft-md">Go back</a>
-            </div>
-
-        </form>
-
+            <footer class="modal-footer">
+                <a href="appointmentCancelled.html" class="btn btn-primary pull-left"><i class="fa-solid "></i> Cancel appointment </a>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid "></i> Let me think about this...</a>
+            </footer>
+        </section>
 
 
         <div class="row">
@@ -229,40 +257,15 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/cleave/cleave.min.js"></script>
-    <script src="../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../js/tc/intl-tel-input/js/utils.js"></script>
+    <script src="../../js/tc/bootstrap/transition.js"></script>
+    <script src="../../js/tc/bootstrap/collapse.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $("#phone").intlTelInput({
-                initialCountry: "ca",
-                preferredCountries: ["ca", "us"],
-                formatOnInit: true,
-                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
-                        new Cleave('.input-phone', {
-                            placeholder: "-",
-                            blocks: [3, 3, 4],
-                            numericOnly: true
-                        });
-                        return "999-999-9999";
-                    } else {
-                        return selectedCountryPlaceholder;
-                    }
 
-                }
-            });
 
-            new Cleave('.input-numeric-6', {
-                blocks: [6],
-                numericOnly: true
-            });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
