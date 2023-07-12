@@ -130,47 +130,49 @@
         <h2>Contact information</h2>
         <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
 
-        <form method="get">
-            <div class="form-group">
+        <div class="wb-frmvld">
+            <form method="get">
                 <div class="form-group">
-                    <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
-                    <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50">
+                    <div class="form-group">
+                        <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
+                        <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="2" data-rule-maxlength="50" data-msg="Enter your first name.">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
+                    <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-rule-maxlength="50" data-msg="Enter your last name.">
                 </div>
 
-            </div>
-            <div class="form-group">
-                <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
-                <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50">
-            </div>
+                <div class="form-group">
 
-            <div class="form-group">
+                    <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
+                    <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
+                        <input type="number" class="form-control input-numeric-6" aria- describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;" required="required" data-rule-minlength="6" data-rule-maxlength="6" data-msg="Enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office.">
+                    </div>
 
-                <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
-                <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
-                    <input type="text" class="form-control input-numeric-6" aria-describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;">
                 </div>
 
-            </div>
-
-            <div class="form-group mrgn-tp-md">
-                <label for="email">Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
-                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
-            </div>
-            <div class="form-group">
-                <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
-                <div class="form-group form-inline">
-                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17">
+                <div class="form-group mrgn-tp-md">
+                    <label for="email"><span class="mandatory" title="This field is required.">*</span> Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
+                    <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address.">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
+                    <div class="form-group form-inline">
+                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" data-rule-phoneUS="true" data-msg="Enter your telephone number.">
+                    </div>
+                </div>
 
-            <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
+                <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
 
-            <div class="nav-button">
-                <a href="scheduleExam-step5-error.html" class="btn btn-primary" id="btnContinue">Proceed to payment</a>
-                <a href="scheduleExam-step5.html" class="btn btn-default mrgn-lft-md">Go back</a>
-            </div>
+                <div class="nav-button">
+                    <button class="btn btn-primary" id="btnContinue" type="submit">Proceed to payment</button>
+                    <a href="scheduleExam-step5.html" class="btn btn-default mrgn-lft-md">Go back</a>
+                </div>
 
-        </form>
+            </form>
+        </div>
 
 
 
@@ -258,6 +260,13 @@
                 numericOnly: true
             });
 
+        });
+
+        $(".wb-frmvld").one("timerpoke.wb", function(event) {
+            wb.i18nDict["frm-nosubmit"] = "Attention <span class='wb-inv'>: Please correct ";
+            wb.i18nDict["errs-fnd"] = " errors on this page. </span>";
+            wb.i18nDict["err-fnd"] = "error on this page. </span>";
+            wb.i18nDict["err-correct"] = "";
         });
 
     </script>
