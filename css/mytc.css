@@ -951,8 +951,44 @@ figure.thumbnail {
     border-top: 2px solid #666;
     margin-top: 6px;
     margin-bottom: 6px;
+}
 
+#spin-wrapper {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(185, 185, 185, 0.8);
+    z-index: 9999;
+    display: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#cn-spin-wrapper #spinner {
+    border-radius: 10px;
+    position: absolute;
+    color: #F00;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border: 3px solid #26374A;
+    font-size: 1em;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(38, 55, 74, 1) 80%);
+}
+
+#cn-spin-wrapper #spinner p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: block;
 }
 
 @media (min-width: 768px) {
