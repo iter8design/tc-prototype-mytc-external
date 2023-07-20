@@ -304,33 +304,33 @@
                         <p>We've selected the first available date with appointments at this location, but you may select a different date/time that suits your schedule.</p>
 
                         <div class="week-picker calendar-wk bg-grey-light pddng-sm mrgn-bttm-sm">
-                           <div id="#cn-wk">
-                            <div class=" text-center">Week of <a href="#" id="selectWeek" title="Select a week"><span id="weekDisplayed">July 3 to July 7,2023</span><i class="fa-solid fa-calendar-week mrgn-lft-sm"></i></a>
-                            <input id="selectedWeek" type="hidden" />
+                            <div id="#cn-wk">
+                                <div class=" text-center">Week of <a href="#" id="selectWeek" title="Select a week"><span id="weekDisplayed">July 3 to July 7,2023</span><i class="fa-solid fa-calendar-week mrgn-lft-sm"></i></a>
+                                    <input id="selectedWeek" type="hidden" />
+                                </div>
+                                <div id="wk-days" class="row">
+                                    <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg">
+                                        <a href="#" id="lnk-prv-wk" data-period-start="2023-06-25" data-period-end="2023-07-01" title="View week of June 25 to July 1"><i class="fa-regular fa-arrow-alt-circle-left fa-2xl"></i></a>
+
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 text-center pddng-md">Monday
+                                        <div class="xlarge text-muted" title="No appointments available on Monday, July 3" data-date="2023-07-03T00:00:00">3</div>
+
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 text-center bg-info pddng-md">Tuesday
+                                        <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-04T00:00:00">4</a>
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 text-center pddng-md">Wednesday
+                                        <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-05T00:00:00">5</a>
+                                    </div>
+
+                                    <div class="col-md-2 col-xs-2 text-center pddng-md">Thursday
+                                        <div class="xlarge text-muted" title="No appointments available on Thursday, July 6" data-date="2023-07-06T00:00:00">6</div>
+                                    </div>
+                                    <div class="col-md-2 col-xs-2 text-center pddng-md">Friday <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-07T00:00:00">7</a></div>
+                                    <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg"><a href="#" id="lnk-nxt-wk" data-period-start="2023-07-09T00:00:00" data-period-end="2023-07-15T00:00:00" title="View week of July 9 to July 15"><i class="fa-regular fa-arrow-alt-circle-right fa-2xl"></i></a></div>
+                                </div>
                             </div>
-                            <div id="wk-days" class="row">
-                                <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg">
-                                    <a href="#" id="lnk-prv-wk" data-period-start="2023-06-25" data-period-end="2023-07-01" title="View week of June 25 to July 1"><i class="fa-regular fa-arrow-alt-circle-left fa-2xl"></i></a>
-
-                                </div>
-                                <div class="col-md-2 col-xs-2 text-center pddng-md">Monday
-                                    <div class="xlarge text-muted" title="No appointments available on Monday, July 3" data-date="2023-07-03T00:00:00">3</div>
-
-                                </div>
-                                <div class="col-md-2 col-xs-2 text-center bg-info pddng-md">Tuesday
-                                    <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-04T00:00:00">4</a>
-                                </div>
-                                <div class="col-md-2 col-xs-2 text-center pddng-md">Wednesday
-                                    <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-05T00:00:00">5</a>
-                                </div>
-
-                                <div class="col-md-2 col-xs-2 text-center pddng-md">Thursday
-                                    <div class="xlarge text-muted" title="No appointments available on Thursday, July 6" data-date="2023-07-06T00:00:00">6</div>
-                                </div>
-                                <div class="col-md-2 col-xs-2 text-center pddng-md">Friday <a href="#" class="selectable xlarge fnt-wght-bld display-block" data-date="2023-07-07T00:00:00">7</a></div>
-                                <div class="col-md-1 col-xs-1 text-center text-middle mrgn-tp-lg"><a href="#" id="lnk-nxt-wk" data-period-start="2023-07-09T00:00:00" data-period-end="2023-07-15T00:00:00" title="View week of July 9 to July 15"><i class="fa-regular fa-arrow-alt-circle-right fa-2xl"></i></a></div>
-                            </div>
-                        </div>
                         </div>
 
                         <p><i class="fa-regular fa-clock"></i> Duration: Up to 3 hours</p>
@@ -351,6 +351,11 @@
                                             </li>
                                         </ul>
                                     </fieldset>
+                                    <!--
+                                    <div class="alert alert-info">
+                                        <p>Sorry, there are no appointments currently available for the day selected. Select another day.</p>
+                                    </div>
+                                    -->
                                 </div>
                             </div>
 
@@ -442,12 +447,12 @@
                 $("#btnContinue").removeClass("disabled");
             });
 
-        
-            
+
+
             //Load next week with first day of the week selected, refresh timeslots
             $("#lnk-nxt-wk, lnk-prv-wk").on("click", function(event) {
                 event.preventDefault();
-                
+
                 var periodStart = $(this).data("period-start");
                 console.log(periodStart);
                 changeWeek(periodStart);
@@ -455,16 +460,16 @@
                     direction: "right"
                 }, 500, function() {
                     console.log("DONE!"); */
-                    
-                    
-                    /* $("#wk-days").find("[data-date]").each(function() {
+
+
+                /* $("#wk-days").find("[data-date]").each(function() {
                         var date = new Date($(this).data("date")) - 7; 
                     
 
                     });
 
                 });*/
-            }); 
+            });
 
             //Load previous week with first day of the week selected, refresh timeslots
             /*$("#lnk-prv-wk").on("click", function(event) {
@@ -517,7 +522,7 @@
 
             var txtTo = " to ";
             var txtNoAppointments = "No appointments available";
-            
+
             $('#selectedWeek').datepicker({
                 showOtherMonths: true,
                 numberOfMonths: 3,
@@ -531,26 +536,26 @@
                     var dateFormat = inst.settings.dateFormat || $.datepicker._defaults.dateFormat;
                     $('#startDate').text($.datepicker.formatDate(dateFormat, startDate, inst.settings));
                     $('#endDate').text($.datepicker.formatDate(dateFormat, endDate, inst.settings));
-                    
+
                     var displayStartDate = $.datepicker.formatDate('M d', new Date(startDate));
                     var displayEndDate = $.datepicker.formatDate('M d', new Date(endDate));
                     console.log(displayStartDate);
                     $("#weekDisplayed").html(displayStartDate + txtTo + displayEndDate);
-                    selectCurrentWeek(); 
+                    selectCurrentWeek();
                 },
 
                 beforeShowDay: function(date) {
                     //Disable all weekends
                     var day = date.getDay();
-                     if ((day == 6) ||  (day == 0)) {
-                     return [false,"",txtNoAppointments] ;
-                     } else { 
-                     return [true] ;
-                     } 
-                    
-                    
+                    if ((day == 6) || (day == 0)) {
+                        return [false, "", txtNoAppointments];
+                    } else {
+                        return [true];
+                    }
+
+
                     var cssClass = '';
-                    if(date >= startDate && date <= endDate)
+                    if (date >= startDate && date <= endDate)
                         cssClass = 'ui-datepicker-current-day';
                     return [true, cssClass];
                 },
@@ -559,44 +564,46 @@
                 }
             });
 
-            
-             $("#selectWeek").on("click",function (e) {
+
+            $("#selectWeek").on("click", function(e) {
                 e.preventDefault();
-                $('#selectedWeek').datepicker("show");   
+                $('#selectedWeek').datepicker("show");
             });
-            
-        
+
+
         });
-        
+
         function changeWeek(selectedDay) {
             var weekView = $("#wk-days").clone();
-     
+
             $(weekView).find("[data-date]").each(function() {
                 var date = $(this).attr("data", date);
-               
-            });
-            
-            $("#wk-days").hide("slide", {
-                    direction: "right"
-                }, 500, function() {
-                     $("#cn-wk").append(weekView);
-            });
-            
-            $("#wk-days").show("slide", {
-                    direction: "left"
-                }, 500, function() {
 
-             }); 
+            });
+
+            $("#wk-days").hide("slide", {
+                direction: "right"
+            }, 500, function() {
+                $("#cn-wk").append(weekView);
+            });
+
+            $("#wk-days").show("slide", {
+                direction: "left"
+            }, 500, function() {
+
+            });
         }
 
-       
-           
 
-        
+
+
+
         function disableDays(date) {
-             var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
-             if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1) return [false];
-             return [true];
+            var m = date.getMonth(),
+                d = date.getDate(),
+                y = date.getFullYear();
+            if ($.inArray((m + 1) + '-' + d + '-' + y, disabledDays) != -1) return [false];
+            return [true];
         }
 
         $(document).on("wb-ready.wb-geomap", "#osm_map", function(event, map) {
@@ -609,10 +616,7 @@
 
             myMap.getView().setZoom(8);
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
