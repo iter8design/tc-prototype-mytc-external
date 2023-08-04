@@ -135,32 +135,32 @@
                 <div class="form-group">
                     <div class="form-group">
                         <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
-                        <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="2" data-rule-maxlength="50" data-msg="Enter your first name.">
+                        <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="1" data-rule-maxlength="50" data-msg="Enter your first name." data-msg-maxlength="The first name entered may not be greater than 50 characters.">
                     </div>
 
                 </div>
                 <div class="form-group">
                     <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
-                    <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-rule-maxlength="50" data-msg="Enter your last name.">
+                    <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="1" data-rule-maxlength="50" data-msg="Enter your last name." data-msg-maxlength="The last name entered may not be greater than 50 characters.">
                 </div>
 
                 <div class="form-group">
 
                     <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
                     <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
-                        <input type="number" class="form-control input-numeric-6" aria- describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;" required="required" data-rule-minlength="6" data-rule-maxlength="6" data-msg="Enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office.">
+                        <input type="number" class="form-control input-numeric-6" aria- describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;" required="required" data-rule-minlength="6" data-rule-maxlength="6" data-msg="Enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office." data-msg-minlength="The pilot licence or file number must be at least 6 digits long.">
                     </div>
 
                 </div>
 
                 <div class="form-group mrgn-tp-md">
                     <label for="email"><span class="mandatory" title="This field is required.">*</span> Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
-                    <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address.">
+                    <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address." data-msg-maxlength="The email address entered may not be greater than 150 characters." data-rule-email="true" data-msg-email="The email address entered is not valid.">
                 </div>
                 <div class="form-group">
                     <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
                     <div class="form-group form-inline">
-                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" data-rule-phoneUS="true" data-msg="Enter your telephone number.">
+                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" data-rule-phoneUS="true" data-msg="Enter your telephone number." data-rule-digits="true" data-msg-digits="The mobile telephone number entered must be numeric.">
                     </div>
                 </div>
 
@@ -268,10 +268,7 @@
             wb.i18nDict["err-fnd"] = "error on this page. </span>";
             wb.i18nDict["err-correct"] = "";
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
