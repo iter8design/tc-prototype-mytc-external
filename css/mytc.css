@@ -378,6 +378,11 @@ textarea.fieldError,
     padding: 10px 15px;
 }
 
+.cn-exam:hover {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 .panel-primary > .panel-heading {
     background-color: #335075;
     border-color: #335075;

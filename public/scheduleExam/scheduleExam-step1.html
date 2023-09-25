@@ -263,9 +263,9 @@
                 <div class="row" id="cn-exam-list">
 
                     <div class="col-md-12 width100 permit rpp aeroplane">
-                        <div class="panel panel-default mrgn-bttm-md">
+                        <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
-                                <h3 class="panel-title mrgn-0"><a href="scheduleExam-step2.html">Recreational Pilot Permit (Aeroplane)</a>
+                                <h3 class="panel-title mrgn-0 "><a href="scheduleExam-step2.html">Recreational Pilot Permit (Aeroplane)</a>
                                     <span class="pull-right">RPPAE</span>
                                 </h3>
                             </header>
@@ -289,7 +289,7 @@
                     </div>
 
                     <div class="col-md-12 width100 licence cpl helicopter">
-                        <div class="panel panel-default mrgn-bttm-md">
+                        <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h3 class="panel-title mrgn-0"><a href="#">Commercial Pilot Permit (Helicopter)</a>
                                     <span class="pull-right">CPHEL</span>
@@ -316,7 +316,7 @@
 
                     <div class="col-md-12 width100 licence ppl aeroplane">
 
-                        <div class="panel panel-default mrgn-bttm-md">
+                        <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h3 class="panel-title mrgn-0"><a href="#">Private Pilot Licence (Aeroplane)</a>
                                     <span class="pull-right">PPLA</span>
@@ -343,7 +343,7 @@
 
                     <div class="col-md-12 width100 licence atpl helicopter">
 
-                        <div class="panel panel-default mrgn-bttm-md">
+                        <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h2 class="panel-title mrgn-0"><a href="#"><abbr title="Airline Transport Pilot Licence">ATPL</abbr> - Air law, helicopter operation and general navigation (Helicopter)</a>
                                     <span class="pull-right">HARON</span>
@@ -518,6 +518,11 @@
                 licencePermitResult = "";
 
                 $grid.isotope();
+            });
+
+            $(".panel-body, .panel-footer, .panel-heading").on("click", function() {
+                var link = $(this).parent().find("a");
+                link[0].click();
             });
 
 
