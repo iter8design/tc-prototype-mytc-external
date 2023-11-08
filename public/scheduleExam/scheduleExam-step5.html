@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="row">
                     <section class="col-xs-12 col-sm-12">
-                        <h2 class="wb-inv">Transport Canada myTC Account</h2>
+                        <h2 class="wb-inv">Transport Canada OneTC</h2>
                         <a class="app-name" href="#">Transport Canada
                         </a>
                     </section>
@@ -128,25 +128,25 @@
         </h1>
 
         <h2>Contact information</h2>
-        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
+        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#dlg_privacy" class="wb-lbx">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
 
         <div class="wb-frmvld">
             <form method="get">
                 <div class="form-group">
                     <div class="form-group">
-                        <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="wb-inv"> (required)</span>:</label>
+                        <label for="givenName" class="display-block"><span class="mandatory" title="This field is required.">*</span>First name<span class="required wb-inv"> (required)</span>:</label>
                         <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="1" data-rule-maxlength="50" data-msg="Enter your first name." data-msg-maxlength="The first name entered may not be greater than 50 characters.">
                     </div>
 
                 </div>
                 <div class="form-group">
-                    <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="wb-inv"> (required)</span>:</label>
+                    <label for="familyName"><span class="mandatory" title="This field is required.">*</span>Last name<span class="required wb-inv"> (required)</span>:</label>
                     <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="1" data-rule-maxlength="50" data-msg="Enter your last name." data-msg-maxlength="The last name entered may not be greater than 50 characters.">
                 </div>
 
                 <div class="form-group">
 
-                    <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="wb-inv"> (required):</span></label>
+                    <label for="licenceNumber"><span class="mandatory" title="This field is required.">*</span> Pilot licence or file number: <span class="required wb-inv"> (required)</span></label>
                     <div class="input-group"> <span class="input-group-addon" id="suffix">5802-</span>
                         <input type="number" class="form-control input-numeric-6" aria- describedby="licenceNumber suffix" id="licenceNumber" size="6" maxlength="6" style="width: auto;" required="required" data-rule-minlength="6" data-rule-maxlength="6" data-msg="Enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office." data-msg-minlength="The pilot licence or file number must be at least 6 digits long.">
                     </div>
@@ -158,10 +158,26 @@
                     <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address." data-msg-maxlength="The email address entered may not be greater than 150 characters." data-rule-email="true" data-msg-email="The email address entered is not valid.">
                 </div>
                 <div class="form-group">
-                    <label for="phone">Mobile telephone number <span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
+                    <label for="phone">Mobile telephone number <span class="wb-inv"> (optional)</span><span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
                     <div class="form-group form-inline">
-                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" data-rule-phoneUS="true" data-msg="Enter your telephone number." data-rule-digits="true" data-msg-digits="The mobile telephone number entered must be numeric.">
+                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" data-rule-phoneUS="true" data-msg="Enter your telephone number.">
                     </div>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="school" class="display-block">Flight training school attended: <strong class="wb-inv">(optional)</strong>
+                        <span class="fld-example">Let us know who your flight training unit or training provider is and we'll send them a copy of your exam results.</span>
+                    </label>
+                    <input name="school" id="school" type="text" size="25" class="form-control" list="schools" maxlength="200" data-rule-minlength="1" data-rule-maxlength="200" data-msg="Enter the name of the flight training school attended." data-msg-maxlength="The flight training school entered may not be greater than 200 characters.">
+                    <datalist id="schools">
+                        <!--[if lte IE 9]><select><![endif]-->
+                        <option label="Acme Flying School" value="Acme Flying School"></option>
+                        <option label="Beta Ground School" value="Beta Ground School"></option>
+                        <!--[if lte IE 9]></select><![endif]-->
+                    </datalist>
+
+
                 </div>
 
                 <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
@@ -173,6 +189,47 @@
 
             </form>
         </div>
+
+        <section id="dlg_privacy" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Privacy policy</h2>
+            </header>
+            <div class="modal-body">
+                <section>
+                    <div class="container-fluid">
+
+                        <h3>Our obligation</h3>
+                        <p>Transport Canada (TC) is committed to protecting the privacy rights of individuals and safeguarding the personal information under its control.</p>
+
+                        <h3>Description of personal information</h3>
+
+                        <p>"Personal information" is defined as any information, in any form, about an identifiable individual; refer to section 3 of the <em>Privacy Act</em> for further details regarding personal information.</p>
+
+                        <p>Personal information collected by Transport Canada is protected from disclosure to unauthorized persons and/or agencies subject to the provisions of the <em>Privacy Act</em>. Individuals have the right to the protection of and access to their personal information and to request corrections where the individual believes there is an error or omission. Individuals may contact the Department’s Access to Information and Privacy Protection Division to request corrections.</p>
+
+                        <h3>Program/activity</h3>
+                        <p>Scheduling an in-person Civil Aviation exam.</p>
+
+                        <h3>Purpose and use of personal information</h3>
+                        <p>The information requested is required by the Department for the purposes of facilitating processing and payment of appointments to take a Civil Aviation exam at a Transport Canada location.</p>
+
+                        <h3>Right to complain</h3>
+                        <p>Individuals have the right to file a complaint with the Privacy Commissioner of Canada regarding the institution's handling of their personal information.</p>
+
+                        <h3>Consent</h3>
+
+                        <p>By providing your personal information, you acknowledge that you have read and understood this statement and consent to the Department’s collection, use and disclosure of your personal information.</p>
+
+                    </div>
+                </section>
+            </div>
+            <footer class="modal-footer">
+
+                <a href="#" class="btn btn-primary popup-modal-dismiss btn btn-default pull-left hidden-print">Close</a>
+            </footer>
+        </section>
+
+
 
 
 

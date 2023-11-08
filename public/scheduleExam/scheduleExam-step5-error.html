@@ -145,14 +145,18 @@
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
 
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The flight training school entered may not be greater than 200 characters.</a></li>
+
                 <li><i class="fa-li fa fa-angle-right"></i>Enter either an email address or a mobile telephone number that we may reach you at.</li>
+
+
 
                 <li><i class="fa-li fa fa-angle-right"></i>Unfortunately, an error occurred with our payment processing services and we are unable to continue at this time. Please try again later or <a href="all/contactUs.html">contact us</a> for further information.</li>
             </ol>
         </div>
 
         <h2>Contact information</h2>
-        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
+        <p>Let us know who will be taking this exam and how we may reach them. All fields marked with an asterisk (*) are required. The information you provide is collected and stored in accordance with our <a href="#dlg_privacy" class="wb-lbx">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
 
         <form method="get">
             <div class="form-group">
@@ -187,6 +191,22 @@
                 </div>
             </div>
 
+            <div class="form-group">
+
+                <label for="school" class="display-block">Flight training school attended: <strong class="wb-inv">(optional)</strong>
+                    <span class="fld-example">Let us know who your flight training unit or training provider is and we'll send them a copy of your exam results.</span>
+                </label>
+                <input name="school" id="school" type="text" size="25" class="form-control fieldError" list="schools" maxlength="200" data-rule-minlength="1" data-rule-maxlength="200" data-msg="Enter the name of the flight training school attended." data-msg-maxlength="The flight training school entered may not be greater than 200 characters.">
+                <datalist id="schools">
+                    <!--[if lte IE 9]><select><![endif]-->
+                    <option label="Acme Flying School" value="Acme Flying School"></option>
+                    <option label="Beta Ground School" value="Beta Ground School"></option>
+                    <!--[if lte IE 9]></select><![endif]-->
+                </datalist>
+
+
+            </div>
+
             <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
 
             <div class="nav-button">
@@ -195,7 +215,44 @@
             </div>
 
         </form>
+        <section id="dlg_privacy" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Privacy policy</h2>
+            </header>
+            <div class="modal-body">
+                <section>
+                    <div class="container-fluid">
 
+                        <h3>Our obligation</h3>
+                        <p>Transport Canada (TC) is committed to protecting the privacy rights of individuals and safeguarding the personal information under its control.</p>
+
+                        <h3>Description of personal information</h3>
+
+                        <p>"Personal information" is defined as any information, in any form, about an identifiable individual; refer to section 3 of the <em>Privacy Act</em> for further details regarding personal information.</p>
+
+                        <p>Personal information collected by Transport Canada is protected from disclosure to unauthorized persons and/or agencies subject to the provisions of the <em>Privacy Act</em>. Individuals have the right to the protection of and access to their personal information and to request corrections where the individual believes there is an error or omission. Individuals may contact the Department’s Access to Information and Privacy Protection Division to request corrections.</p>
+
+                        <h3>Program/activity</h3>
+                        <p>Scheduling an in-person Civil Aviation exam.</p>
+
+                        <h3>Purpose and use of personal information</h3>
+                        <p>The information requested is required by the Department for the purposes of facilitating processing and payment of appointments to take a Civil Aviation exam at a Transport Canada location.</p>
+
+                        <h3>Right to complain</h3>
+                        <p>Individuals have the right to file a complaint with the Privacy Commissioner of Canada regarding the institution's handling of their personal information.</p>
+
+                        <h3>Consent</h3>
+
+                        <p>By providing your personal information, you acknowledge that you have read and understood this statement and consent to the Department’s collection, use and disclosure of your personal information.</p>
+
+                    </div>
+                </section>
+            </div>
+            <footer class="modal-footer">
+
+                <a href="#" class="btn btn-primary popup-modal-dismiss btn btn-default pull-left hidden-print">Close</a>
+            </footer>
+        </section>
 
 
 
