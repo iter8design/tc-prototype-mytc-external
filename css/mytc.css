@@ -148,6 +148,66 @@ thead tr {
 }
 
 
+.alert-floating.alert-warning > :first-child:before,
+.alert-floating.alert-info > :first-child:before {
+    content: "";
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-left: -1.3em;
+    position: absolute;
+}
+
+.alert-success::before,
+.alert-danger::before,
+.alert-warning::before,
+.alert-warning::before {
+    content: none;
+}
+
+.alert > :first-child {
+    margin-left: 1.2em;
+    margin-top: auto;
+}
+
+.alert-floating {
+    position: relative;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 3px 5px #888;
+    -moz-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+}
+
+.alert-floating h2 {
+    margin-top: 20px;
+}
+
+.alert-floating.alert-warning h2:before {
+    font-family: "Glyphicons Halflings";
+    padding-right: 5px;
+    color: #f90;
+    content: "\e107";
+}
+
+.alert-floating.alert-info h2:before {
+    font-family: "Glyphicons Halflings";
+    padding-right: 5px;
+    color: #31708f;
+    content: "\e086";
+}
+
+.alert-floating.alert-info {
+    border-left: solid 10px #31708f;
+    color: #000;
+    background-color: #EBF2FA;
+}
+
+.alert-dismissible .close {
+    right: 15px;
+}
 
 .alert-info-section {
     /* background: #dbedfe; */
@@ -168,6 +228,10 @@ thead tr {
     border-color: #f90;
     border-image: none;
     background-clip: border-box;
+}
+
+.alert-warning.alert-floating > * {
+    margin-left: auto;
 }
 
 .alert-info {
