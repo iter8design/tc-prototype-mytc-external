@@ -145,7 +145,7 @@
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
 
-                <!--<li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The flight training school entered may not be greater than 200 characters.</a></li>-->
+                <li><a href="#school"><i class="fa-li fa fa-angle-right"></i>The flight training unit number entered must be 4 digits long.</a></li>
 
                 <li><i class="fa-li fa fa-angle-right"></i>Enter either an email address or a mobile telephone number that we may reach you at.</li>
 
@@ -191,22 +191,16 @@
                 </div>
             </div>
 
-            <!--<div class="form-group">
+            <div class="form-group">
 
-                <label for="school" class="display-block">Flight training school attended: <strong class="wb-inv">(optional)</strong>
-                    <span class="fld-example">Let us know who your flight training unit or training provider is and we'll send them a copy of your exam results.</span>
+                <label for="school" class="display-block">Flight training unit number: <strong class="wb-inv">(optional)</strong>
+                    <span class="fld-example">If you don't know what the flight training unit number is where you received your training, you may <a href="https://wwwapps.tc.gc.ca/Saf-Sec-Sur/2/CAS-SAC/ftaefveas.aspx?lang=eng" target="_blank">search for it here.</a>.  We'll send them a copy of your exam results.</span>
                 </label>
-                <input name="school" id="school" type="text" size="25" class="form-control fieldError" list="schools" maxlength="200" data-rule-minlength="1" data-rule-maxlength="200" data-msg="Enter the name of the flight training school attended." data-msg-maxlength="The flight training school entered may not be greater than 200 characters.">
-                <datalist id="schools"> -->
-            <!--[if lte IE 9]><select><![endif]-->
-            <!--<option label="Acme Flying School" value="Acme Flying School"></option>
-                    <option label="Beta Ground School" value="Beta Ground School"></option>-->
-            <!--[if lte IE 9]></select><![endif]-->
-            <!--</datalist>
+                <input name="school" id="school" type="text" size="4" class="form-control fieldError" maxlength="4" data-rule-minlength="4" data-rule-maxlength="4" data-msg-minlength="The flight training unit number must be 4 digits long.">
 
 
-            </div>-->
 
+            </div>
             <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
 
             <div class="nav-button">
@@ -341,10 +335,7 @@
             });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
