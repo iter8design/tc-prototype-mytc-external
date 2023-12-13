@@ -106,11 +106,13 @@
         <!-- InstanceBeginEditable name="Content" -->
 
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Sign-up for an account</h1>
-        <p>Welcome to <em>One</em>TC! We'll need some basic information from you before we get started. All fields are mandatory. The information you provide is collected and stored in accordance with our <a href="#" target="_blank" title="This links will open in a new window">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
+        <p>Welcome to <em>One</em>TC! We'll need some basic information from you before we get started. </p>
+
+        <hr />
 
         <div class="wb-frmvld">
             <form action="activateAccount.html" method="get">
-                <div class="form-group form-inline">
+                <!--<div class="form-group form-inline">
                     <div class="form-group">
                         <label for="firstName" class="display-block">First name<span class="wb-inv"> (required)</span>:</label>
                         <input name="firstName" id="firstName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="2" data-msg="Enter your first name.">
@@ -119,17 +121,45 @@
                 <div class="form-group">
                     <label for="lastName">Last name<span class="wb-inv"> (required)</span>:</label>
                     <input name="lastName" id="lastName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-msg="Enter your last name.">
-                </div>
-                <div class="form-group mrgn-tp-md">
-                    <label for="email">Your email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send you notifications and messages about your account.</span> </label>
-                    <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-msg="Enter your email address.">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Your telephone number: <span class="wb-inv"> (required):</span> <span class="fld-example">We'll only contact you by telephone if there's a problem with any of the services you apply for or are using.</span> </label>
-                    <div class="form-group form-inline">
-                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" required="required" data-rule-phoneUS="true" data-msg="Enter your telephone number.">
+                </div> -->
+
+
+                <fieldset class="gc-chckbxrdio">
+                    <legend class="medium">I am representing:</legend>
+                    <ul class="list-unstyled lst-spcd-2">
+                        <li class="checkbox">
+                            <input type="radio" name="representing" id="myself" checked>
+                            <label for="myself">Myself</label>
+                        </li>
+                        <li class="checkbox">
+                            <input type="radio" name="representing" id="business">
+                            <label for="business">A business</label>
+                        </li>
+                        <li class="checkbox">
+                            <input type="radio" name="representing" id="government">
+                            <label for="government">A government organization (municipal, provincial, or federal)</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <div id="cn-contact-info" class="mrgn-tp-lg">
+                    <div class="form-group">
+                        <label for="fullName"><span class="mandatory" title="This field is required.">*</span> Your full name<span class="wb-inv"> (required)</span>:</label>
+                        <input name="fullName" id="fullName" type="text" size="35" class="form-control" autocomplete="name" maxlength="50" required="required" data-rule-minlength="2" data-msg="Enter your full name.">
+                    </div>
+                    <div class="form-group mrgn-tp-md">
+                        <label for="email"><span class="mandatory" title="This field is required.">*</span> Your email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send you notifications and messages about your account.</span> </label>
+                        <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-msg="Enter your email address.">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><span class="mandatory" title="This field is required.">*</span> Your telephone number: <strong class="wb-inv"> (required):</strong> <span class="fld-example">We'll only contact you by telephone if there's a problem with any of the services you apply for or are using.</span> </label>
+                        <div class="form-group form-inline">
+                            <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" required="required" data-rule-phoneUS="true" data-msg="Enter your telephone number.">
+                        </div>
                     </div>
                 </div>
+
+                <p>By signing up for an account, you agree to the <a href="#" target="_blank" title="This links will open in a new window">terms of use</a>.</p>
 
                 <div class="nav-button">
                     <!--<a class="btn btn-primary" href="activateAccount.html">Sign-up for an account</a> -->
@@ -207,10 +237,7 @@
             wb.i18nDict["err-fnd"] = "error on this page. </span>";
             wb.i18nDict["err-correct"] = "";
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
