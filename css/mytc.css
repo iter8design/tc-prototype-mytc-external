@@ -601,6 +601,16 @@ textarea.fieldError,
     clear: both;
 }
 
+.alert.alert-info > :first-child {
+    margin-left: 1.6em;
+}
+
+
+.selected-day {
+    border: 1px double #666;
+    background-color: #d7e5f5;
+}
+
 .wb-tabs [role=tablist] li {
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
