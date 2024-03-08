@@ -507,6 +507,31 @@ textarea.fieldError,
     margin-top: 40px;
 }
 
+.panel.panel-radio > .panel-heading,
+.panel.panel-radio > .panel-body,
+.panel.panel-radio > .panel-footer {
+    display: table-cell;
+}
+
+.panel.panel-radio > .panel-heading,
+.panel.panel-radio > .panel-footer {
+    width: 5%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.panel.panel-radio > .panel-heading {
+    border-right: 1px solid #ddd;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+
+.panel.panel-radio > .panel-footer {
+    border-left: 1px solid #ddd;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
 .cn-filter--grey {
     padding: 20px;
 
