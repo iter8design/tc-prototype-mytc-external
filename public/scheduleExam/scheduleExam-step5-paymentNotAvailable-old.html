@@ -131,7 +131,7 @@
             <h2>Attention</h2>
             <ol class="fa-ul">
                 <li><i class="fa-li fa fa-angle-right"></i>
-                    <p>There is an issue preventing us from processig your payment at this time. Your exams appointments are still reserved for you under reference number <strong>{CIV-9999999999}</strong> and will be held until payment can be made.</p>
+                    <p>There is an issue preventing us from processing your payment at this time. Your exams appointments are still reserved for you under reference number <strong>{CIV-9999999999}</strong> and will be held until payment can be made.</p>
 
                     <p>You will receive an email to complete your payment and confirm your appointment within the next few days. Should you have any questions, please contact your local Transport Canada office indicated in your appointment confirmation email.</p>
 
@@ -179,16 +179,11 @@
 
                 <div class="form-group">
 
-                    <label for="school" class="display-block">Flight training school attended: <strong class="wb-inv">(optional)</strong>
+                    <label for="school" class="display-block">Flight training unit number: <strong class="wb-inv">(optional)</strong>
                         <span class="fld-example">If you don't know what the flight training unit number is where you received your training, you may <a href="https://wwwapps.tc.gc.ca/Saf-Sec-Sur/2/CAS-SAC/ftaefveas.aspx?lang=eng" target="_blank">search for it here.</a> </span>
                     </label>
-                    <input name="school" id="school" type="text" size="25" class="form-control" list="schools" maxlength="200" data-rule-minlength="1" data-rule-maxlength="200" data-msg="Enter the name of the flight training school attended." data-msg-maxlength="The flight training school entered may not be greater than 200 characters.">
-                    <datalist id="schools">
-                        <!--[if lte IE 9]><select><![endif]-->
-                        <option label="Acme Flying School" value="Acme Flying School"></option>
-                        <option label="Beta Ground School" value="Beta Ground School"></option>
-                        <!--[if lte IE 9]></select><![endif]-->
-                    </datalist>
+                    <input name="school" id="school" type="text" size="4" class="form-control" maxlength="4" data-rule-minlength="4" data-rule-maxlength="4" data-msg-minlength="The flight training unit number must be 4 digits long.">
+
 
 
                 </div>
