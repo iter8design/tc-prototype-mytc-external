@@ -347,6 +347,10 @@ textarea.fieldError,
     font-weight: normal;
 }
 
+.gc-checkbox {
+    transform: scale(2, 2);
+}
+
 .input-group-addon,
 .input-group-btn .btn {
     padding: 6px 14px;
@@ -694,7 +698,7 @@ textarea.fieldError,
 }
 
 .cn-certification input[type=checkbox] {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 
