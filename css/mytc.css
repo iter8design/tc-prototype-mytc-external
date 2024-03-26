@@ -526,6 +526,7 @@ textarea.fieldError,
 .panel.panel-radio > .panel-heading,
 .panel.panel-radio > .panel-body,
 .panel.panel-radio > .panel-footer {
+
     display: table-cell;
 }
 
@@ -534,6 +535,7 @@ textarea.fieldError,
 .panel.panel-radio > .panel-footer {
     width: 5%;
     border: 0;
+
     vertical-align: middle;
 }
 
