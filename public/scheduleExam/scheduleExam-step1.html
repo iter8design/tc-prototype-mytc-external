@@ -412,65 +412,74 @@
                 <header class="modal-header">
                     <h2 class="modal-title">Which sections of this exam do you need to write?</h2>
                 </header>
+
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>This partial exam may only be written if you did not pass one or more sections of this exam.</p>
-                            <div class="alert alert-info">
+                    <!--<div class='alert alert-danger'>
+                        <h2>Attention</h2>
+                        <ol class='fa-ul'>
+                            <li><i class='fa-li fa fa-angle-right'></i><a href='#'>Select at least one partial exam to write</a></li>
+                        </ol>
+                    </div>-->
+                    <form method="get" action="#">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>This partial exam may only be written if you did not pass one or more sections of this exam.</p>
+                                <div class="alert alert-info">
 
-                                <p>All partial exams must be written at the same time.</p>
+                                    <p>All partial exams must be written at the same time.</p>
+                                </div>
+                                <fieldset>
+                                    <legend class="wb-inv">Select the sections of the exam to write</legend>
+                                    <div class="panel panel-default panel-radio mrgn-bttm-0">
+                                        <div class="panel-heading">
+                                            <input type="checkbox" id="c1" name="exams" class="gc-checkbox">
+                                        </div>
+                                        <div class="panel-body">
+                                            <label for="c1"><strong>Recreational Pilot Permit (Aeroplane) - Partial - General (RAGEN)</strong> </label>
+
+                                        </div>
+                                        <div class="panel-footer">
+                                            <strong class="large pull-right">$35.00</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default panel-radio  mrgn-bttm-0">
+                                        <div class="panel-heading">
+                                            <input type="checkbox" id="c2" name="exams" class="gc-checkbox">
+                                        </div>
+                                        <div class="panel-body">
+                                            <label for="c2"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Law (RALAW)</strong></label>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <strong class="large pull-right">$35.00</strong>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-radio mrgn-bttm-0">
+                                        <div class="panel-heading">
+                                            <input type="checkbox" id="c3" name="exams" class="gc-checkbox">
+                                        </div>
+                                        <div class="panel-body">
+                                            <label for="c3"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Meteorology (RAMET)</strong></label>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <strong class="large pull-right">$35.00</strong>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default panel-radio mrgn-bttm-0">
+                                        <div class="panel-heading">
+                                            <input type="checkbox" id="c4" name="exams" class="gc-checkbox">
+                                        </div>
+                                        <div class="panel-body">
+                                            <label for="c4"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Navigation (RANAV)</strong></label>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <strong class="large pull-right">$35.00</strong>
+                                        </div>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <fieldset>
-                                <legend class="wb-inv">Select the sections of the exam to write</legend>
-                                <div class="panel panel-default panel-radio mrgn-bttm-0">
-                                    <div class="panel-heading">
-                                        <input type="checkbox" id="c1" name="exams" class="gc-checkbox">
-                                    </div>
-                                    <div class="panel-body">
-                                        <label for="c1"><strong>Recreational Pilot Permit (Aeroplane) - Partial - General (RAGEN)</strong> </label>
-
-                                    </div>
-                                    <div class="panel-footer">
-                                        <strong class="large pull-right">$35.00</strong>
-                                    </div>
-                                </div>
-
-                                <div class="panel panel-default panel-radio  mrgn-bttm-0">
-                                    <div class="panel-heading">
-                                        <input type="checkbox" id="c2" name="exams" class="gc-checkbox">
-                                    </div>
-                                    <div class="panel-body">
-                                        <label for="c2"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Law (RALAW)</strong></label>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <strong class="large pull-right">$35.00</strong>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default panel-radio mrgn-bttm-0">
-                                    <div class="panel-heading">
-                                        <input type="checkbox" id="c3" name="exams" class="gc-checkbox">
-                                    </div>
-                                    <div class="panel-body">
-                                        <label for="c3"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Meteorology (RAMET)</strong></label>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <strong class="large pull-right">$35.00</strong>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default panel-radio mrgn-bttm-0">
-                                    <div class="panel-heading">
-                                        <input type="checkbox" id="c4" name="exams" class="gc-checkbox">
-                                    </div>
-                                    <div class="panel-body">
-                                        <label for="c4"><strong>Recreational Pilot Permit (Aeroplane) - Partial - Navigation (RANAV)</strong></label>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <strong class="large pull-right">$35.00</strong>
-                                    </div>
-                                </div>
-                            </fieldset>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <footer class="modal-footer">
                     <a href="scheduleExam-step2-partial.html" class="btn btn-primary pull-left" id="btnContinue">Continue</a>
@@ -624,6 +633,25 @@
                 link[0].click();
             });
 
+            $("#btnContinue").on("click", function(event) {
+                event.preventDefault();
+                if ("(input[type=checkbox][name=exams]:checked').length > 0)") {
+                    $("input[type='checkbox']").addClass('fieldError');
+                    console.log("alert");
+                    if ($("#examSelectError").length === 0) {
+                        $(".modal-body").prepend(" <div class='alert alert-danger' role='status' id='examSelectError'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Select at least one partial exam to write</a></li></ol></div>");
+                    }
+                }
+
+                return false;
+            });
+
+            //Cancel button pressed
+            $("#btnClose").on("click", function(event) {
+                $(".modal-body input").removeClass("fieldError");
+                $(".modal-body .alert").remove();
+            });
+
 
             const styleOptions = {
                 // Add styleOptions to customize Web Chat canvas
@@ -724,10 +752,7 @@
             $("#live-chat-window").css("display", "none");
             $("#live-engage-button").css("display", "visible");
         };
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>

@@ -93,6 +93,18 @@ thead tr {
     box-shadow: 3px 3px 5px #888;
 }
 
+.alert > :first-child:before {
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-left: -1.3em;
+    position: absolute;
+}
+
+.alert-danger > :first-child:before {
+    color: #d3080c;
+    content: "\e101";
+}
+
 .alert-danger,
 .alert-info,
 .alert-success,
