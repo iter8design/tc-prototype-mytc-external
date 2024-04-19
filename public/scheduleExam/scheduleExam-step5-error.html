@@ -135,6 +135,7 @@
                 <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>Enter your last name.</a></li>
                 <li><a href="#licenceNumber"><i class="fa-li fa fa-angle-right"></i>Enter your pilot licence or file number. If you do not have one, please contact a Transport Canada office.</a></li>
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Enter your email address.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Enter the name of the flight training unit or the pilot licence number of the flight instructor who delivered training.</a></li>
 
 
                 <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>The first name entered may not be greater than 50 characters.</a></li>
@@ -145,11 +146,7 @@
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
                 <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
 
-                <li><a href="#school"><i class="fa-li fa fa-angle-right"></i>The flight training unit number entered must be 4 digits long.</a></li>
-
-
-
-                <li><a href="#instructor"><i class="fa-li fa fa-angle-right"></i>The instructor pilot licence number must be 6 digits long.</a></li>
+                <li><a href="#school"><i class="fa-li fa fa-angle-right"></i>The name of the flight training unit or the pilot licence number of the flight instructor who delivered training may not be greater than 100 characters.</a></li>
 
                 <li><i class="fa-li fa fa-angle-right"></i>Enter either an email address or a mobile telephone number that we may reach you at.</li>
 
@@ -197,6 +194,18 @@
 
             <div class="form-group">
 
+                <label for="school" class="display-block"><span class="mandatory" title="This field is required.">*</span> Name of the flight training unit or pilot licence number of the flight instructor who provided training: <strong class="wb-inv">(required)</strong>
+                    <span class="fld-example">This should be the same as the organization or individual who signed the letter of recommendation, if required.</span>
+                </label>
+                <input name="school" id="school" type="text" size="100" class="form-control fieldError" maxlength="100" required="required" data-rule-minlength="1" data-rule-maxlength="100" data-msg="Enter the name of the flight training unit or the pilot licence number of the flight instructor who delivered training." data-msg-maxlength="The name of the flight training unit or the pilot licence number of the flight instructor who delivered training.may not be greater than 100 characters.">
+
+
+
+            </div>
+
+
+            <!--<div class="form-group">
+
                 <label for="school" class="display-block">Flight training unit number: <strong class="wb-inv">(optional)</strong>
                     <span class="fld-example">If you don't know what the flight training unit number is where you received your training, you may <a href="https://wwwapps.tc.gc.ca/Saf-Sec-Sur/2/CAS-SAC/ftaefveas.aspx?lang=eng" target="_blank">search for it here.</a>.</span>
                 </label>
@@ -214,7 +223,7 @@
                 <div class="input-group"> <span class="input-group-addon" id="ins-suffix">5802-</span>
                     <input type="number" class="form-control input-numeric-6 fieldError" aria- describedby="licenceNumber ins-suffix" id="instructor" size="6" maxlength="6" style="width: auto;" required="required" data-rule-minlength="6" data-rule-maxlength="6" data-msg="Enter the instructor pilot licence number." data-msg-minlength="The instructor pilot licence number must be at least 6 digits long.">
                 </div>
-            </div>
+            </div> -->
 
             <p>Your total exam cost is <span class="xlarge">$35.00</span></p>
 
