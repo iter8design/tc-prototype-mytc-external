@@ -262,7 +262,7 @@
 
                 <div class="row" id="cn-exam-list">
 
-                    <div class="col-md-12 width100 permit rpp aeroplane">
+                    <div class="col-md-12 width100 permit rpp aeroplane" data-sort="4">
                         <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h3 class="panel-title mrgn-0 "><a href="scheduleExam-step2.html">Recreational Pilot Permit (Aeroplane)</a>
@@ -288,7 +288,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12 width100 permit rpp aeroplane">
+                    <div class="col-md-12 width100 permit rpp aeroplane" data-sort="3">
                         <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h3 class="panel-title mrgn-0 "><a href="#dlg-schedulePartial" class="wb-lbx">Recreational Pilot Permit (Aeroplane) - Partial</a>
@@ -304,7 +304,6 @@
                                     <div class="col-md-4 cxol-sm-6"><i class="fa-regular fa-clock"></i> Up to 3 hours long</div>
 
                                     <div class="col-md-6 col-sm-12 text-right">
-                                        <span class="label label-danger text-uppercase">Partial</span> <br>
                                         <span class="label label-primary text-uppercase">Permit</span>
                                         <span class="label label-warning text-uppercase"><abbr title="Recreational Pilot Permit">RPP</abbr></span>
                                         <span class="label label-info text-uppercase">Aeroplane</span>
@@ -315,7 +314,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12 width100 licence cpl helicopter">
+                    <div class="col-md-12 width100 licence cpl helicopter" data-sort="2">
                         <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
                                 <h3 class="panel-title mrgn-0"><a href="#">Commercial Pilot Permit (Helicopter)</a>
@@ -341,7 +340,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12 width100 licence ppl aeroplane">
+                    <div class="col-md-12 width100 licence ppl aeroplane" data-sort="1">
 
                         <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
@@ -368,7 +367,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12 width100 licence atpl helicopter">
+                    <div class="col-md-12 width100 licence atpl helicopter" data-sort="0">
 
                         <div class="panel panel-default cn-exam mrgn-bttm-md">
                             <header class="panel-heading">
@@ -551,7 +550,6 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
@@ -573,6 +571,10 @@
                 // options
                 itemSelector: '.col-md-12',
                 layoutMode: 'fitRows',
+                getSortData: {
+                    sortOrder: '[data-sort]'
+                },
+                sortBy: 'sortOrder',
                 filter: function() {
                     var $this = $(this);
                     var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
@@ -589,6 +591,8 @@
 
                 $grid.isotope();
             }));
+
+
 
 
             $grid.on('arrangeComplete', function() {
@@ -637,7 +641,7 @@
                 event.preventDefault();
                 if ("(input[type=checkbox][name=exams]:checked').length > 0)") {
                     $("input[type='checkbox']").addClass('fieldError');
-                    console.log("alert");
+
                     if ($("#examSelectError").length === 0) {
                         $(".modal-body").prepend(" <div class='alert alert-danger' role='status' id='examSelectError'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Select at least one partial exam to write</a></li></ol></div>");
                     }
@@ -653,59 +657,7 @@
             });
 
 
-            const styleOptions = {
-                // Add styleOptions to customize Web Chat canvas
-                hideUploadButton: true,
-                botAvatarInitials: "TC",
-                userAvatarInitials: "You",
-                backgroundColor: "rgba(255,255,255,0.85)",
-            };
 
-            // Add your BOT ID below
-            var BOT_ID = "8fe35793-7686-4e31-af3f-4f2a7f249232";
-            var theURL = "https://powerva.microsoft.com/api/botmanagement/v1/directline/directlinetoken?botId=" + BOT_ID;
-
-            /*const store = window.WebChat.createStore({},
-                ({
-                    dispatch
-                }) => next => action => {
-                    if (action.type === "DIRECT_LINE/CONNECT_FULFILLED") {
-                        dispatch({
-                            meta: {
-                                method: "keyboard",
-                            },
-                            payload: {
-                                activity: {
-                                    channelData: {
-                                        postBack: true,
-                                    },
-                                    //Web Chat will show the 'Greeting' System Topic message which has a trigger-phrase 'hello'
-                                    name: 'startConversation',
-                                    type: "event"
-                                },
-                            },
-                            type: "DIRECT_LINE/POST_ACTIVITY",
-                        });
-                    }
-                    return next(action);
-                }
-            ); */
-
-            /*fetch(theURL)
-                .then((response) => response.json())
-                .then((conversationInfo) => {
-                    window.WebChat.renderWebChat({
-                            directLine: window.WebChat.createDirectLine({
-                                token: conversationInfo.token,
-                            }),
-                            store: store,
-                            styleOptions,
-                        },
-                        //document.getElementById("webchat")
-                        document.getElementById("live-chat-box")
-                    );
-                })
-                .catch((err) => console.error("An error occurred: " + err)); */
 
         });
 
@@ -742,16 +694,6 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
-        function openChat() {
-            $("#live-chat-window").css("display", "block");
-            $("#live-engage-button").css("display", "none");
-        };
-
-        function closeChat() {
-            $("#live-chat-window").css("display", "none");
-            $("#live-engage-button").css("display", "visible");
-        };
     </script>
 
 
