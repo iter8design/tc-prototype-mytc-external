@@ -133,7 +133,7 @@
 
 
         <p>
-            <label for="sch-inp-ac" class="">Enter the name or code or the exam or select the type of licence/permit you are working towards, certification type, or the aircraft you want to fly.</label>
+            <label for="sch-inp-ac" class="">Enter the name or code of the exam or select the type of licence/permit you are working towards, certification type, or the aircraft you want to fly.</label>
         </p>
         <div class="input-group">
             <input type="text" id="sch-inp-ac" placeholder="Find your exam..." class="form-control full-width" size="35" autofocus>
@@ -419,7 +419,7 @@
                             <li><i class='fa-li fa fa-angle-right'></i><a href='#'>Select at least one partial exam to write</a></li>
                         </ol>
                     </div>-->
-                    <form method="get" action="#">
+                    <form method="get" action="scheduleExam-step2.html" id="partialSelect">
                         <div class="row">
                             <div class="col-md-12">
                                 <p>This partial exam may only be written if you did not pass one or more sections of this exam.</p>
@@ -632,22 +632,50 @@
                 $grid.isotope();
             });
 
-            $(".panel-body, .panel-footer, .panel-heading").on("click", function() {
+            $(".panel-body").on("click", function() {
                 var link = $(this).parent().find("a");
-                link[0].click();
+                if (link.length) {
+                    link[0].click();
+                }
+
             });
 
             $("#btnContinue").on("click", function(event) {
                 event.preventDefault();
-                if ("(input[type=checkbox][name=exams]:checked').length > 0)") {
-                    $("input[type='checkbox']").addClass('fieldError');
+                console.log($("input[type=checkbox][name=exams]:checked").length);
+                if ($("input[type=checkbox][name=exams]:checked").length == 0) {
+                    console.log("no exams selected" + $("input[type=checkbox][name=exams]:checked").length);
 
-                    if ($("#examSelectError").length === 0) {
-                        $(".modal-body").prepend(" <div class='alert alert-danger' role='status' id='examSelectError'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Select at least one partial exam to write</a></li></ol></div>");
+                    $("input[type='checkbox']").addClass('fieldError');
+                    console.log("error?" + $("#examSelectError").length);
+                    if ($("#examSelectError").length == 0) {
+                        $(".modal-body").prepend(" <div class='alert alert-danger' role='status' id='examSelectError'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i>Select at least one partial exam to write</li></ol></div>");
+
+                    } else {
+                        $("#examSelectError").remove();
                     }
+
+                    return false;
+
+                } else if ($("input[type=checkbox][name=exams]").not(':checked').length == 0) {
+
+
+                    if ($("#examSelectError").length == 0) {
+                        $(".modal-body").prepend(" <div class='alert alert-danger' role='status' id='examSelectError'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i>If all sections of the exam need to be taken, press the <strong>Close</strong> button and select the complete exam from the list.  A partial exam is intended to write only some sections of the exam rather than the entire exam.</li></ol></div>");
+
+
+                    } else {
+                        $("#examSelectError").remove();
+                    }
+                    return false;
+                } else {
+                    console.log("all good");
+                    $("#examSelectError").remove();
+                    $("#partialSelect").submit();
                 }
 
-                return false;
+
+
             });
 
             //Cancel button pressed
