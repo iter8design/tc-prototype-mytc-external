@@ -1095,6 +1095,19 @@ figure.thumbnail {
     margin-bottom: 6px;
 }
 
+#payment-spin-wrapper {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: auto;
+}
+
+#cn-payment-spin-wrapper #payment-spinner {
+    color: #38414d;
+    text-align: center;
+}
+
 #spin-wrapper {
     width: 100%;
     position: fixed;
@@ -1110,6 +1123,8 @@ figure.thumbnail {
     align-items: center;
     justify-content: center;
 }
+
+
 
 #cn-spin-wrapper #spinner {
     border-radius: 10px;
