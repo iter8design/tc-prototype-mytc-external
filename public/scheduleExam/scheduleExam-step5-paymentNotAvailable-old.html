@@ -168,7 +168,7 @@
 
                 <div class="form-group mrgn-tp-md">
                     <label for="email"><span class="mandatory" title="This field is required.">*</span> Email address (username@example.com): <span class="fld-example">We'll use this email address to send you reminders about this appointment.</span> </label>
-                    <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address." data-msg-maxlength="The email address entered may not be greater than 150 characters." data-rule-email="true" data-msg-email="The email address entered is not valid.">
+                    <input name="email" id="email" type="email" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="2" data-rule-maxlength="150" data-msg="Enter your email address." data-msg-maxlength="The email address entered may not be greater than 150 characters." data-rule-email="true" data-msg-email="The email address entered is not valid." pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$" data-msg-pattern="The email address entered is not valid.">
                 </div>
                 <div class="form-group">
                     <label for="phone">Mobile telephone number <span class="wb-inv"> (optional)</span><span class="fld-example">We'll use this telephone number to send you reminders or call you if your appointment needs to be rescheduled.</span> </label>
@@ -333,10 +333,7 @@
             wb.i18nDict["err-fnd"] = "error on this page. </span>";
             wb.i18nDict["err-correct"] = "";
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
